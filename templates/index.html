@@ -1,0 +1,303 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "App name" %}{% endblock title %}
+{% block header %}
+	
+{% endblock header %}
+{% block content %}
+<div class="jumbotron">
+	<div class="row justify-content-center;">
+		<div class="row" >
+			<div class="col-md-8" >	
+				<h1>Подготовка к ЕНТ</h1>
+				<hr>
+				<h3>Вы наберете нужный балл!</h3> 
+				<hr>
+				<p>✅ 100% учеников успешно сдали ЕНТ</p>
+				<p>✅ 68% учеников поступили на Грант</p>
+				<p>✅ Занятия 3 раза в неделю по 3 часа в день</p>
+				<p>✅ Оффлайн и Онлайн формат обучения</p>
+				<p>✅ Обучение на казахском и русском языках</p>
+				<p>✅ Поможем с выбором профессии</p>				
+			</div>								
+			<div class="col-md-4">
+				<img src="{% static 'images/student.png' %}" alt="student" style="width:100%; padding: 10px;">
+			</div>
+		</div>			
+	</div>
+</div>
+<div class="div-button-left">
+	<button onclick="location.href='{% url 'claim_create' %}'" class="btn btn-outline-info">{% trans "claim create" %}</button>	
+</div>
+<hr>
+<div class="div-width-100-text-center">
+	<h3>Подготовим к ЕНТ и КТА за 4-5 месяцев по доступной цене с гарантией результата</h3>	
+</div>
+<div class="part1">
+	<div class="row" >
+		<div class="col-md-8" >	
+			<div class="outer">
+				<div class="inner">
+					<h3>Уже помогли поступить более 1200 ученикам. Присоединяйтесь, поможем и вам!</h3>
+				</div>
+			</div>	
+		</div>										
+		<div class="col-md-4">
+			<img src="{% static 'images/student2.png' %}" alt="student" style="width:100%; padding: 10px;">
+		</div>				
+	</div>	
+</div>
+<div class="div-button-left">
+	<button onclick="location.href='{% url 'claim_create' %}'" class="btn btn-outline-info">{% trans "claim create" %}</button>	
+</div>
+<hr>
+<div class="div-width-100-text-center">
+	<h3>Подготовка по предметам</h3>
+</div>
+<div class="part2">
+	<div class="row">
+		<div class="col-md-2">
+			<img class="img-center" src="{% static 'images/1.png' %}" alt="">
+			<h4>Математическая грамотность</h4>		
+		</div>
+		<div class="col-md-2">
+			<img class="img-center" src="{% static 'images/2.png' %}" alt="">		
+			<h4>История Казахстана</h4>		
+		</div>
+		<div class="col-md-2">		
+			<img class="img-center" src="{% static 'images/4.png' %}" alt="">		
+			<h4>Математика</h4>
+		</div>
+		<div class="col-md-2">		
+			<img class="img-center" src="{% static 'images/5.png' %}" alt="">		
+			<h4>Физика</h4>
+		</div>	
+		<div class="col-md-2">
+			<img class="img-center" src="{% static 'images/6.png' %}" alt="">
+			<h4>Химия</h4>		
+		</div>
+		<div class="col-md-2">		
+			<img class="img-center" src="{% static 'images/7.png' %}" alt="">		
+			<h4>Биология</h4>
+		</div>
+		<div class="col-md-2">
+			<img class="img-center" src="{% static 'images/8.png' %}" alt="">		
+			<h4>География</h4>		
+		</div>
+		<div class="col-md-2">		
+			<img class="img-center" src="{% static 'images/9.png' %}" alt="">		
+			<h4>Информатика</h4>
+		</div>	
+		<div class="col-md-2">		
+			<img class="img-center" src="" alt="">		
+			<h4></h4>
+		</div>	
+		<div class="col-md-2">		
+			<img class="img-center" src="" alt="">		
+			<h4></h4>
+		</div>	
+		<div class="col-md-2">
+			<img class="img-center" src="{% static 'images/13.png' %}" alt="">		
+			<h4>Всемирная история</h4>		
+		</div>
+		<div class="col-md-2">		
+			<img class="img-center" src="{% static 'images/12.png' %}" alt="">		
+			<h4>Основы права</h4>
+		</div>		
+	</div>
+</div>
+<div class="div-button-left">
+	<button onclick="location.href='{% url 'claim_create' %}'" class="btn btn-outline-info">{% trans "claim create" %}</button>	
+</div>
+<hr>
+<div class="div-width-100-text-center">
+	<h3>Как проходит обучение?</h3>
+</div>
+<div class="part3">	
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Ученик получает всё необходимое в онлайн-модуле: теорию, тесты, и домашние задания — не придётся ничего искать</h4> 
+		</div>
+	</div>
+	<div class="row">		
+		<div class="col-md-12">
+			<h4>А чтобы закрепить знания - проводим еженедельные практикумы</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h4>А ещё наша платформа показывает прогресс: результат входной диагностики знаний, баллы за контрольные, результаты домашних заданий и рейтинг в группе</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Успех ученика всегда под контролем преподавателя</h4>
+		</div>		
+	</div>
+</div>
+<div class="div-button-left">
+	<button onclick="location.href='{% url 'claim_create' %}'" class="btn btn-outline-info">{% trans "claim create" %}</button>	
+</div>
+<hr>
+<div class="div-width-100-text-center">
+	<h3>6 причин обучаться у нас</h3>
+</div>
+<div class="part4" >
+	<div class="row" style="margin-top: 100px;">
+		<div class="col-md-4">	
+			<h2>01</h2>
+			<p>Авторская программа по комплексной подготовке к ЕНТ</p>			
+		</div>
+		<div class="col-md-4">	
+			<h2>02</h2>
+			<p>KASIP авторская цифровая профориентационная система (помощь при выборе профессии)</p>
+		</div>
+		<div class="col-md-4">	
+			<h2>03</h2>
+			<p>Психологические и развивающие тренинги на разные темы</p>
+		</div>
+	</div>
+	<div class="row" style="margin-top: 100px;">
+		<div class="col-md-4">	
+			<h2>04</h2>
+			<p>Ежемесячные бесплатные пробные тестирования на базе Национального центра тестирования</p>			
+		</div>
+		<div class="col-md-4">	
+			<h2>05</h2>
+			<p>Мониторинг успеваемости по каждому предмету для каждого ученика</p>
+		</div>
+		<div class="col-md-4">	
+			<h2>06</h2>
+			<p>Скидки на обучение выпускникам центра EDTECH от ВУЗ-партнеров</p>
+		</div>
+	</div>
+</div>
+<div class="div-button-left">
+	<button onclick="location.href='{% url 'claim_create' %}'" class="btn btn-outline-info">{% trans "claim create" %}</button>	
+</div>
+<hr>
+<div class="div-width-100-text-center">
+	<h3>ВУЗы партнеры</h3>
+</div>
+<div class="row" style="background-color: white; padding:30px">
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/abay.png' %}" alt="partners" >
+	</div>
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/almau-2.jpg' %}" alt="partners" >
+	</div>
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/aues.png' %}" alt="partners" >
+	</div>
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/caspianu.jpg' %}" alt="partners" >
+	</div>
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/etu-2.jpg' %}" alt="partners" >
+	</div>
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/kazntu.png' %}" alt="partners" >
+	</div>
+</div>
+<div class="row" style="background-color: white; padding:30px">
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/kbtu.png' %}" alt="partners" >
+	</div>
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/muit.png' %}" alt="partners" >
+	</div>
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/narhoz.png' %}" alt="partners" >
+	</div>
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/sdu.png' %}" alt="partners" >
+	</div>
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/turanuniv.png' %}" alt="partners" >
+	</div>
+	<div class="col-md-2">
+		<img class="img-center2" src="{% static 'images/uib-2.jpg' %}" alt="partners" >
+	</div>
+</div>
+<div class="div-button-left">
+	<button onclick="location.href='{% url 'claim_create' %}'" class="btn btn-outline-info">{% trans "claim create" %}</button>	
+</div>
+<hr>
+<div class="div-width-100-text-center">
+	<h3>Отзывы</h3>
+</div>
+<div class="reviews">
+	<div class="row">
+		{% if reviews.count > 0 %}
+			{% for r in reviews %}
+				<div class="col-lg-3 border" style="padding:10px;">
+					<h6> {{ r.user }}</h6>
+					<p><div class="Stars" style='--rating: {{ r.rating | stringformat:".1f" }};'></div></p>							
+					<blockquote>{{ r.details | slice:"0:255" }}...</blockquote>
+					<p>{{ r.dater | date:"d.m.Y H:i" }}</p>					
+				</div>
+			{% endfor %}
+		{% endif %}						
+	</div>
+	<div class="row">
+		<h3 style="text-align: center;"><a href="{% url 'reviews_list'%}">{% trans "reviews" %}</a></h3>
+	</div>	
+	<div class="row">
+	{% if user.is_authenticated %}	
+		<p style="text-align: center;"><a href="{% url 'reviews_create'%}">{% trans "Add" %}</a></p>
+	{% endif %}
+	</div>	
+</div>
+<div class="div-button-left">
+	<button onclick="location.href='{% url 'claim_create' %}'" class="btn btn-outline-info">{% trans "claim create" %}</button>	
+</div>
+<hr>
+<div class="div-width-100-text-center">
+	<h3>Наши преподаватели...</h3>
+</div>
+<div class="teachers">
+	<div class="row">
+		{% if teachers.count > 0 %}
+			{% for c in teachers %}
+			<div class="col-lg-3 border" style="padding:10px;">
+				{% if c.photo.url == "/ media /images/woman1.jpg" %}
+					<img class="img-center" src="{% static 'images/woman1.jpg' %}" alt="{{ c.fio }}" title="{{ c.details }}">    
+				{% elif c.photo.url == "/ media /images/woman2.jpg" %}
+					<img class="img-center" src="{% static 'images/woman2.jpg' %}" alt="{{ c.fio }}" title="{{ c.details }}">    
+				{% elif c.photo.url == "/ media /images/woman3.jpg" %}
+					<img class="img-center" src="{% static 'images/woman3.jpg' %}" alt="{{ c.fio }}" title="{{ c.details }}">    
+				{% elif c.photo.url == "/ media /images/woman4.jpg" %}
+					<img class="img-center" src="{% static 'images/woman4.jpg' %}" alt="{{ c.fio }}" title="{{ c.details }}">    
+				{% elif c.photo.url == "/ media /images/woman5.jpg" %}
+					<img class="img-center" src="{% static 'images/woman5.jpg' %}" alt="{{ c.fio }}" title="{{ c.details }}">    
+				{% elif c.photo.url == "/ media /images/woman6.jpg" %}
+					<img class="img-center" src="{% static 'images/woman6.jpg' %}" alt="{{ c.fio }}" title="{{ c.details }}">    
+				{% elif c.photo.url == "/ media /images/woman7.jpg" %}
+					<img class="img-center" src="{% static 'images/woman7.jpg' %}" alt="{{ c.fio }}" title="{{ c.details }}">    
+				{% elif c.photo.url == "/ media /images/male1.jpg" %}
+					<img class="img-center" src="{% static 'images/male1.jpg' %}" alt="{{ c.fio }}" title="{{ c.details }}">    
+				{% elif c.photo.url == "/ media /images/male2.jpg" %}
+					<img class="img-center" src="{% static 'images/male2.jpg' %}" alt="{{ c.fio }}" title="{{ c.details }}">    
+				{% elif c.photo.url == "/ media /images/male3.jpg" %}
+					<img class="img-center" src="{% static 'images/male3.jpg' %}" alt="{{ c.fio }}" title="{{ c.details }}">    
+				{% else %}
+					{% if c.photo.url != None %}
+						<img class="img-center" src="{{ c.photo.url}}" alt="{{ c.fio }}" title="{{ c.details }}">
+					{% endif %}
+				{% endif %}
+				<h4>{{ c.fio }}</h4>
+				<h5>{{ c.details }}</h5>
+			</div>
+			{% endfor %}
+		{% endif %}						
+	</div>	
+	<div class="row">
+		<h3 style="text-align: center;"><a href="{% url 'teachers_list'%}">{% trans "teachers" %}</a></h3>
+	</div>	
+</div>
+<div class="div-button-left">
+	<button onclick="location.href='{% url 'claim_create' %}'" class="btn btn-outline-info">{% trans "claim create" %}</button>	
+</div>
+
+{% endblock content %}

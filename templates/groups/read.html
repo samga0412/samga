@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Read" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "groups" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h5>{{ groups.training }}</h5>			
+			<h4>{{ groups.title }}</h4>			
+		</div>
+		<div class="card-body">		
+			<p>{{ groups.details }}</p>					
+		</div>
+		<div class="card-footer">				
+			<p>{% trans "teachers" %}: {{ groups.teachers }}</p>			
+		</div>		
+	</div>
+	<div class="div-button-left">
+		<a class="btn btn-outline-info" style="width:100px; margin-top:5px" href="{% url 'groups_index' %}">{% trans "Back" %}</a>    
+	</div>
+</div>
+
+{% endblock content %}
