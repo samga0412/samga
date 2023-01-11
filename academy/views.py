@@ -98,6 +98,9 @@ def teachers_create(request):
         teachers.surname = request.POST.get("surname")
         teachers.name = request.POST.get("name")
         teachers.patronymic = request.POST.get("patronymic")
+        teachers.details = request.POST.get("details")
+        if 'photo' in request.FILES:                
+            teachers.photo = request.FILES['photo']
         teachersform = TeachersForm(request.POST)
         if teachersform.is_valid():
             teachers.save()
@@ -119,6 +122,9 @@ def teachers_edit(request, id):
             teachers.surname = request.POST.get("surname")
             teachers.name = request.POST.get("name")
             teachers.patronymic = request.POST.get("patronymic")
+            teachers.details = request.POST.get("details")
+            if "photo" in request.FILES:                
+                teachers.photo = request.FILES["photo"]
             teachersform = TeachersForm(request.POST)
             if teachersform.is_valid():
                 teachers.save()
@@ -127,7 +133,7 @@ def teachers_edit(request, id):
                 return render(request, "teachers/edit.html", {"form": teachersform})                
         else:
             # Загрузка начальных данных
-            teachersform = TeachersForm(initial={'surname': teachers.surname, 'name': teachers.name, 'patronymic': teachers.patronymic })
+            teachersform = TeachersForm(initial={'surname': teachers.surname, 'name': teachers.name, 'patronymic': teachers.patronymic, 'details': teachers.details, 'photo': teachers.photo  })
             return render(request, "teachers/edit.html", {"form": teachersform})
     except Teachers.DoesNotExist:
         return HttpResponseNotFound("<h2>Teachers not found</h2>")

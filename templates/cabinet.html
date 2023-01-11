@@ -10,13 +10,13 @@
 <a href="{% url 'password_change' %}">{% trans "Change password" %}</a>
 <hr>
 {% if members.count > 0 %}
-<h2>{% trans "memberss" %}</h2>
+<h2>{% trans "training" %}</h2>
 <div class="row">
-	<table id="myTable" class="table-manager" style="width:100%">
+	<table id="myTable3" class="table-manager" style="width:100%">
 		<thead>
 			<tr>
 				<th><p>{% trans "training" %}</p></th>
-				<th><p>{% trans "groups" %}</p></th>
+				<th><p>{% trans "group_title" %}</p></th>
 				<th><p>{% trans "user" %}</p></th>
 			</tr>
 		</thead>
@@ -48,7 +48,7 @@
 			<tr>
 				<th><p>{% trans "dates" %}</p></th>
 				<th><p>{% trans "training" %}</p></th>
-				<th><p>{% trans "groups" %}</p></th>
+				<th><p>{% trans "group_title" %}</p></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -74,7 +74,7 @@
 {% if payment.count > 0 %}
 <h2>{% trans "payments" %}</h2>
 <div class="row">
-	<table id="myTable" class="table-manager" style="width:100%">
+	<table id="myTable2" class="table-manager" style="width:100%">
 		<thead>
 			<tr>
 				<th><p>{% trans "datep" %}</p></th>

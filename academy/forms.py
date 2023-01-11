@@ -16,11 +16,12 @@ from django.contrib.auth.forms import UserCreationForm
 class TeachersForm(forms.ModelForm):
     class Meta:
         model = Teachers
-        fields = ('surname', 'name', 'patronymic')
+        fields = ('surname', 'name', 'patronymic', 'details', 'photo')
         widgets = {
             'surname': TextInput(attrs={"size":"100"}),
             'name': TextInput(attrs={"size":"100"}),
-            'patronymic': TextInput(attrs={"size":"100"}),            
+            'patronymic': TextInput(attrs={"size":"100"}),   
+            'details': Textarea(attrs={'cols': 100, 'rows': 3}),
         }
     # Метод-валидатор для поля surname
     def clean_surname(self):
