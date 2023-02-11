@@ -3,136 +3,268 @@
 {% block title %}{% endblock title %}
 {% block header %}{% endblock header %} 
 {% block content %}
-<div class="card-header">
-	<h2>{% trans "FAQ" %}</h2>
+<div class="div-width-100-text-center">
+	<h3>{% trans "FAQ" %}</h3>
 </div>
-<div id="accordion">
-	<div class="card" style="width:100%">
-		<div class="card-header" id="heading1">
-			<h5 class="mb-0">
-				<button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-				Обязательно ли сдавать январское ЕНТ?
-				</button>
-			</h5>
-		</div>
-		<div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
-			<div class="card-body" >							
-				<p>Нет, не обязательно. ЕНТ в январе сдаётся по желанию. Сертификат январского ЕНТ действует для поступления на платное отделение в университеты нашей страны.</p>
+<br>
+{% if LANGUAGE_CODE == 'kk' %}
+	<div id="accordion">
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading1">
+				<h5 class="mb-0">
+					<button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+					Қаңтар айындағы ҰБТ тапсыру міндетті ме?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+				<div class="card-body" >							
+					<p>Жоқ, міндетті емес. ҰБТ қаңтар айында өз қалауы бойынша тапсырылады. Қаңтардағы ҰБТ сертификаты еліміздің университеттеріне ақылы бөлімге түсу үшін қолданылады.</p>
+				</div>
 			</div>
 		</div>
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading2">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+					ҰБТ-ның бейіндік пәндері (мысалы, биология және химия немесе химия және биология) қандай тәртіппен өтетіні маңызды ма?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Жоқ, бұл маңызды емес.</p>
+				</div>
+			</div>
+		</div>		
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading3">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+					Егер мен ақылы бөлімге түссем, грантқа қалай ауысуға тырысамын?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Жыл сайын студенттерді мемлекеттік грантқа қабылдайтын әрбір университетте босатылған мемлекеттік Гранттар конкурсы өткізіледі. Грантқа ие болу үшін керемет оқу керек.</p>
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading4">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+					Ауылдық квота дегеніміз не?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Ауылдық квота - Бұл ауыл мектептерінің түлектеріне арналған мемлекеттік гранттардың жеке саны.</p>							
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading5">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+					Егер сіз шығармашылық мамандыққа ҰБТ тапсаңыз, грантқа қалай түсуге болады?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Университеттерде шығармашылық емтихандар мемлекеттік гранттар конкурсына дейін өткізіледі. Шығармашылық емтихандарды тапсырғаннан кейін сіз құжаттар тізімімен және шығармашылық емтихандардың нәтижелерімен мемлекеттік гранттар конкурсына қатысуға өтініш бересіз.</p>							
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading6">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+					Мемлекеттік гранттар конкурсына құжаттарды қайда тапсыруға болады?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse6" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Өтініште сіз түскіңіз келетін университеттерді көрсете отырып, өз қалаңыздың кез-келген университетінде құжаттарды тапсыра аласыз.</p>							
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading7">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+					It-жолдамаға түсу кезінде талапкердің дайындығы қандай болуы керек?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse7" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Университеттер үміткерден оқуға түскенге дейін бағдарламалау дағдыларын талап етпейді. Сіз барлық білімді бірінші курста нөлден аласыз. Бірінші курстағы барлық білім беру бағдарламаларында компьютерлік бағдарламалармен жұмыс істеу дағдыларын дамытуға көмектесетін "ақпараттық-коммуникациялық технологиялар" пәні бар.</p>
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading8">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+					Мемлекеттік гранттар конкурсында қандай бейіндік пәндер бойынша үлкен бәсекелестік бар?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse8" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Экономикалық, құқықтық және гуманитарлық бағыттар бойынша үлкен бәсекелестік, өйткені олардың комбинациясы бойынша бейіндік пәндерге мемлекеттік гранттардың саны аз бөлінеді.</p>				
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading9">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+					Студенттік академиялық ұтқырлық туралы айтып берсеңіз, шетелде оқу үшін ЖОО-да грантты қалай алуға болады?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse9" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Академиялық ұтқырлық-бұл 2-3 курс студенттеріне арналған алмасу бағдарламасы. Айырбастау бойынша оқуға үміткер болу үшін келесі талаптарға сай болу қажет: IELTS 6.0 және одан жоғары GPA 3.0 және одан жоғары мотивациялық хат жазу, неге сіз академиялық ұтқырлық бағдарламасынан өтуге лайықсыз. Оқытушылардан екі ұсыныс хат алыңыз. Алмасу бойынша оқыту 1 семестрге (4-5 ай) созылады. Сіз шетелдік ЖОО-да оқисыз, содан кейін оралып, қазақстандық жоо-да оқуды жалғастырасыз.</p>							
+				</div>
+			</div>
+		</div>				
+	</div>				
+{% else %}
+	<div id="accordion">
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading1">
+				<h5 class="mb-0">
+					<button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+					Обязательно ли сдавать январское ЕНТ?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+				<div class="card-body" >							
+					<p>Нет, не обязательно. ЕНТ в январе сдаётся по желанию. Сертификат январского ЕНТ действует для поступления на платное отделение в университеты нашей страны.</p>
+				</div>
+			</div>
+		</div>
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading2">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+					Важно ли, в каком порядке будут проходить профильные предметы ЕНТ (например, биология и химия или химия и биология)?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Нет, это не имеет значения.</p>
+				</div>
+			</div>
+		</div>		
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading3">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+					Если я поступил на платное отделение, как я могу попытаться перевестись на грант?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Ежегодно в каждом университете, принимающем студентов на государственный грант, проводится конкурс освободившихся государственных грантов. Чтобы претендовать на грант, необходимо отлично учиться.</p>
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading4">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+					Что такое сельская квота?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Сельская квота – это отдельное количество государственных грантов для выпускников сельских школ.</p>							
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading5">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+					Если проходишь ЕНТ на творческую специальность, как поступить на грант?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Творческие экзамены в университетах проводятся до конкурса государственных грантов. После прохождения творческих экзаменов вы с перечнем документов и результатом творческих экзаменов подаете заявление на участие в конкурсе государственных грантов.</p>							
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading6">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+					Где можно подать документы на конкурс государственных грантов?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse6" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Подать документы можно в любом университете своего города, указав в заявлении вузы, в которые вы хотите поступить.</p>							
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading7">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+					Какая должна быть подготовка у абитуриента при поступлении на IT-направления?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse7" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Университеты не требуют, чтобы у абитуриента были навыки программирования до поступления. Все знания вы получите с нуля на первом курсе. У всех образовательных программ на первом курсе есть дисциплина «Информационно-коммуникационные технологии», которая вам поможет в развитии ваших навыков работы с компьютерными программами.</p>
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading8">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+					По каким профильным предметам большая конкуренция на конкурсе государственных грантов?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse8" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Большая конкуренция по экономическим, юридическим и гуманитарным направлениям, так как по их комбинациям профильным предметам выделяется меньшее количество государственных грантов.</p>				
+				</div>
+			</div>
+		</div>				
+		<div class="card" style="width:100%">
+			<div class="card-header" id="heading9">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+					Расскажите о студенческой академической мобильности, как можно получить грант в вузе на обучение за рубежом?
+					</button>
+				</h5>
+			</div>
+			<div id="collapse9" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<div class="card-body">
+					<p>Академическая мобильность – это программа обучения по обмену для студентов 2–3 курса. Для того, чтобы претендовать на обучение по обмену, необходимо соответствовать следующим требованиям: IELTS 6.0 и выше GPA 3.0 и выше Написать мотивационное письмо, почему именно вы достойны пройти программу академической мобильности. Взять два рекомендационных письма у преподавателей. Обучение по обмену длится 1 семестр (4–5 месяцев). Вы учитесь в зарубежном вузе, затем возвращаетесь и продолжаете обучение в своем казахстанском вузе.</p>							
+				</div>
+			</div>
+		</div>				
 	</div>
-	<div class="card" style="width:100%">
-		<div class="card-header" id="heading2">
-			<h5 class="mb-0">
-				<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-				Важно ли, в каком порядке будут проходить профильные предметы ЕНТ (например, биология и химия или химия и биология)?
-				</button>
-			</h5>
-		</div>
-		<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-			<div class="card-body">
-				<p>Нет, это не имеет значения.</p>
-			</div>
-		</div>
-	</div>		
-	<div class="card" style="width:100%">
-		<div class="card-header" id="heading3">
-			<h5 class="mb-0">
-				<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-				Если я поступил на платное отделение, как я могу попытаться перевестись на грант?
-				</button>
-			</h5>
-		</div>
-		<div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-			<div class="card-body">
-				<p>Ежегодно в каждом университете, принимающем студентов на государственный грант, проводится конкурс освободившихся государственных грантов. Чтобы претендовать на грант, необходимо отлично учиться.</p>
-			</div>
-		</div>
-	</div>				
-	<div class="card" style="width:100%">
-		<div class="card-header" id="heading4">
-			<h5 class="mb-0">
-				<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-				Что такое сельская квота?
-				</button>
-			</h5>
-		</div>
-		<div id="collapse4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-			<div class="card-body">
-				<p>Сельская квота – это отдельное количество государственных грантов для выпускников сельских школ.</p>							
-			</div>
-		</div>
-	</div>				
-	<div class="card" style="width:100%">
-		<div class="card-header" id="heading5">
-			<h5 class="mb-0">
-				<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-				Если проходишь ЕНТ на творческую специальность, как поступить на грант?
-				</button>
-			</h5>
-		</div>
-		<div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-			<div class="card-body">
-				<p>Творческие экзамены в университетах проводятся до конкурса государственных грантов. После прохождения творческих экзаменов вы с перечнем документов и результатом творческих экзаменов подаете заявление на участие в конкурсе государственных грантов.</p>							
-			</div>
-		</div>
-	</div>				
-	<div class="card" style="width:100%">
-		<div class="card-header" id="heading6">
-			<h5 class="mb-0">
-				<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-				Где можно подать документы на конкурс государственных грантов?
-				</button>
-			</h5>
-		</div>
-		<div id="collapse6" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-			<div class="card-body">
-				<p>Подать документы можно в любом университете своего города, указав в заявлении вузы, в которые вы хотите поступить.</p>							
-			</div>
-		</div>
-	</div>				
-	<div class="card" style="width:100%">
-		<div class="card-header" id="heading7">
-			<h5 class="mb-0">
-				<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-				Какая должна быть подготовка у абитуриента при поступлении на IT-направления?
-				</button>
-			</h5>
-		</div>
-		<div id="collapse7" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-			<div class="card-body">
-				<p>Университеты не требуют, чтобы у абитуриента были навыки программирования до поступления. Все знания вы получите с нуля на первом курсе. У всех образовательных программ на первом курсе есть дисциплина «Информационно-коммуникационные технологии», которая вам поможет в развитии ваших навыков работы с компьютерными программами.</p>
-			</div>
-		</div>
-	</div>				
-	<div class="card" style="width:100%">
-		<div class="card-header" id="heading8">
-			<h5 class="mb-0">
-				<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-				По каким профильным предметам большая конкуренция на конкурсе государственных грантов?
-				</button>
-			</h5>
-		</div>
-		<div id="collapse8" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-			<div class="card-body">
-				<p>Большая конкуренция по экономическим, юридическим и гуманитарным направлениям, так как по их комбинациям профильным предметам выделяется меньшее количество государственных грантов.</p>				
-			</div>
-		</div>
-	</div>				
-	<div class="card" style="width:100%">
-		<div class="card-header" id="heading9">
-			<h5 class="mb-0">
-				<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-				Расскажите о студенческой академической мобильности, как можно получить грант в вузе на обучение за рубежом?
-				</button>
-			</h5>
-		</div>
-		<div id="collapse9" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-			<div class="card-body">
-				<p>Академическая мобильность – это программа обучения по обмену для студентов 2–3 курса. Для того, чтобы претендовать на обучение по обмену, необходимо соответствовать следующим требованиям: IELTS 6.0 и выше GPA 3.0 и выше Написать мотивационное письмо, почему именно вы достойны пройти программу академической мобильности. Взять два рекомендационных письма у преподавателей. Обучение по обмену длится 1 семестр (4–5 месяцев). Вы учитесь в зарубежном вузе, затем возвращаетесь и продолжаете обучение в своем казахстанском вузе.</p>							
-			</div>
-		</div>
-	</div>				
-</div>
-		
+				
+{% endif %}		
 {% endblock content %}

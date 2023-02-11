@@ -10,6 +10,18 @@
 	<div class="row justify-content-center;">
 		<div class="row" >
 			<div class="col-md-8" >	
+			{% if LANGUAGE_CODE == 'kk' %}
+				<h1>ЕНТ дайындық</h1> 
+				<hr>
+				<h3> Сіз дұрыс ұпай жинайсыз!</h3> 
+				<hr>
+				<p>✅ оқушылардың 100% - ы ҰБТ тапсырды</p>
+				<p>✅ оқушылардың 68% - ы грантына түсті</p>
+				<p>✅ сабақтар аптасына 3 рет күніне 3 сағаттан</p>
+				<p>✅ офлайн және онлайн оқыту форматы</p>
+				<p>✅ қазақ және орыс тілдерінде оқыту</p>
+				<p>✅ мамандық таңдауға көмектесейік</p>			
+			{% else %}
 				<h1>Подготовка к ЕНТ</h1>
 				<hr>
 				<h3>Вы наберете нужный балл!</h3> 
@@ -20,6 +32,7 @@
 				<p>✅ Оффлайн и Онлайн формат обучения</p>
 				<p>✅ Обучение на казахском и русском языках</p>
 				<p>✅ Поможем с выбором профессии</p>				
+			{% endif %}
 			</div>								
 			<div class="col-md-4">
 				<img src="{% static 'images/student.png' %}" alt="student" style="width:100%; padding: 10px;">
@@ -32,14 +45,22 @@
 </div>
 <hr>
 <div class="div-width-100-text-center">
-	<h3>Подготовим к ЕНТ и КТА за 4-5 месяцев по доступной цене с гарантией результата</h3>	
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h3>Нәтижеге кепілдік бере отырып, қол жетімді бағамен 4-5 айда ҰБТ мен КТА-ға дайындалайық</h3>	
+	{% else %}
+		<h3>Подготовим к ЕНТ и КТА за 4-5 месяцев по доступной цене с гарантией результата</h3>	
+	{% endif %}	
 </div>
 <div class="part1">
 	<div class="row" >
 		<div class="col-md-8" >	
 			<div class="outer">
 				<div class="inner">
-					<h3>Уже помогли поступить более 1200 ученикам. Присоединяйтесь, поможем и вам!</h3>
+					{% if LANGUAGE_CODE == 'kk' %}
+						<h3>1200-ден астам оқушыға оқуға түсуге көмектесті. Қосылыңыз, біз сізге де көмектесеміз!</h3>
+					{% else %}
+						<h3>Уже помогли поступить более 1200 ученикам. Присоединяйтесь, поможем и вам!</h3>			
+					{% endif %}					
 				</div>
 			</div>	
 		</div>										
@@ -53,58 +74,114 @@
 </div>
 <hr>
 <div class="div-width-100-text-center">
-	<h3>Подготовка по предметам</h3>
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h3>Пәндер бойынша дайындық</h3>
+	{% else %}
+		<h3>Подготовка по предметам</h3>
+	{% endif %}	
 </div>
 <div class="part2">
 	<div class="row">
-		<div class="col-md-2">
-			<img class="img-center" src="{% static 'images/1.png' %}" alt="">
-			<h4>Математическая грамотность</h4>		
-		</div>
-		<div class="col-md-2">
-			<img class="img-center" src="{% static 'images/2.png' %}" alt="">		
-			<h4>История Казахстана</h4>		
-		</div>
-		<div class="col-md-2">		
-			<img class="img-center" src="{% static 'images/4.png' %}" alt="">		
-			<h4>Математика</h4>
-		</div>
-		<div class="col-md-2">		
-			<img class="img-center" src="{% static 'images/5.png' %}" alt="">		
-			<h4>Физика</h4>
-		</div>	
-		<div class="col-md-2">
-			<img class="img-center" src="{% static 'images/6.png' %}" alt="">
-			<h4>Химия</h4>		
-		</div>
-		<div class="col-md-2">		
-			<img class="img-center" src="{% static 'images/7.png' %}" alt="">		
-			<h4>Биология</h4>
-		</div>
-		<div class="col-md-2">
-			<img class="img-center" src="{% static 'images/8.png' %}" alt="">		
-			<h4>География</h4>		
-		</div>
-		<div class="col-md-2">		
-			<img class="img-center" src="{% static 'images/9.png' %}" alt="">		
-			<h4>Информатика</h4>
-		</div>	
-		<div class="col-md-2">		
-			<img class="img-center" src="" alt="">		
-			<h4></h4>
-		</div>	
-		<div class="col-md-2">		
-			<img class="img-center" src="" alt="">		
-			<h4></h4>
-		</div>	
-		<div class="col-md-2">
-			<img class="img-center" src="{% static 'images/13.png' %}" alt="">		
-			<h4>Всемирная история</h4>		
-		</div>
-		<div class="col-md-2">		
-			<img class="img-center" src="{% static 'images/12.png' %}" alt="">		
-			<h4>Основы права</h4>
-		</div>		
+		{% if LANGUAGE_CODE == 'kk' %}
+			<div class="col-md-2">
+				<img class="img-center" src="{% static 'images/1.png' %}" alt="">
+				<h4>Математикалық сауаттылық</h4>		
+			</div>
+			<div class="col-md-2">
+				<img class="img-center" src="{% static 'images/2.png' %}" alt="">		
+				<h4>Қазақстан тарихы</h4>		
+			</div>
+			<div class="col-md-2">		
+				<img class="img-center" src="{% static 'images/4.png' %}" alt="">		
+				<h4>Математика</h4>
+			</div>
+			<div class="col-md-2">		
+				<img class="img-center" src="{% static 'images/5.png' %}" alt="">		
+				<h4>Физика</h4>
+			</div>	
+			<div class="col-md-2">
+				<img class="img-center" src="{% static 'images/6.png' %}" alt="">
+				<h4>Химия</h4>		
+			</div>
+			<div class="col-md-2">		
+				<img class="img-center" src="{% static 'images/7.png' %}" alt="">		
+				<h4>Биология</h4>
+			</div>
+			<div class="col-md-2">
+				<img class="img-center" src="{% static 'images/8.png' %}" alt="">		
+				<h4>География</h4>		
+			</div>
+			<div class="col-md-2">		
+				<img class="img-center" src="{% static 'images/9.png' %}" alt="">		
+				<h4>Информатика</h4>
+			</div>	
+			<div class="col-md-2">		
+				<img class="img-center" src="" alt="">		
+				<h4></h4>
+			</div>	
+			<div class="col-md-2">		
+				<img class="img-center" src="" alt="">		
+				<h4></h4>
+			</div>	
+			<div class="col-md-2">
+				<img class="img-center" src="{% static 'images/13.png' %}" alt="">		
+				<h4>Дүниежүзілік тарих</h4>		
+			</div>
+			<div class="col-md-2">		
+				<img class="img-center" src="{% static 'images/12.png' %}" alt="">		
+				<h4>Құқық негіздері</h4>
+			</div>		
+		{% else %}
+			<div class="col-md-2">
+				<img class="img-center" src="{% static 'images/1.png' %}" alt="">
+				<h4>Математическая грамотность</h4>		
+			</div>
+			<div class="col-md-2">
+				<img class="img-center" src="{% static 'images/2.png' %}" alt="">		
+				<h4>История Казахстана</h4>		
+			</div>
+			<div class="col-md-2">		
+				<img class="img-center" src="{% static 'images/4.png' %}" alt="">		
+				<h4>Математика</h4>
+			</div>
+			<div class="col-md-2">		
+				<img class="img-center" src="{% static 'images/5.png' %}" alt="">		
+				<h4>Физика</h4>
+			</div>	
+			<div class="col-md-2">
+				<img class="img-center" src="{% static 'images/6.png' %}" alt="">
+				<h4>Химия</h4>		
+			</div>
+			<div class="col-md-2">		
+				<img class="img-center" src="{% static 'images/7.png' %}" alt="">		
+				<h4>Биология</h4>
+			</div>
+			<div class="col-md-2">
+				<img class="img-center" src="{% static 'images/8.png' %}" alt="">		
+				<h4>География</h4>		
+			</div>
+			<div class="col-md-2">		
+				<img class="img-center" src="{% static 'images/9.png' %}" alt="">		
+				<h4>Информатика</h4>
+			</div>	
+			<div class="col-md-2">		
+				<img class="img-center" src="" alt="">		
+				<h4></h4>
+			</div>	
+			<div class="col-md-2">		
+				<img class="img-center" src="" alt="">		
+				<h4></h4>
+			</div>	
+			<div class="col-md-2">
+				<img class="img-center" src="{% static 'images/13.png' %}" alt="">		
+				<h4>Всемирная история</h4>		
+			</div>
+			<div class="col-md-2">		
+				<img class="img-center" src="{% static 'images/12.png' %}" alt="">		
+				<h4>Основы права</h4>
+			</div>			
+		{% endif %}	
+		
 	</div>
 </div>
 <div class="div-button-left">
@@ -112,73 +189,139 @@
 </div>
 <hr>
 <div class="div-width-100-text-center">
-	<h3>Как проходит обучение?</h3>
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h3>Оқыту қалай өтеді?</h3>			
+	{% else %}
+		<h3>Как проходит обучение?</h3>			
+	{% endif %}	
 </div>
-<div class="part3">	
-	<div class="row">
-		<div class="col-md-12">
-			<h4>Ученик получает всё необходимое в онлайн-модуле: теорию, тесты, и домашние задания — не придётся ничего искать</h4> 
+<div class="part3">
+	{% if LANGUAGE_CODE == 'kk' %}
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Студент онлайн модульде қажет нәрсенің бәрін алады: теория, тесттер, және үй тапсырмасы-ештеңе іздеудің қажеті жоқ</h4> 
+			</div>
 		</div>
-	</div>
-	<div class="row">		
-		<div class="col-md-12">
-			<h4>А чтобы закрепить знания - проводим еженедельные практикумы</h4>
+		<div class="row">		
+			<div class="col-md-12">
+				<h4>Ал білімді бекіту үшін апта сайынғы семинарлар өткіземіз</h4>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<h4>А ещё наша платформа показывает прогресс: результат входной диагностики знаний, баллы за контрольные, результаты домашних заданий и рейтинг в группе</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Біздің платформа прогрессті көрсетеді: білімді енгізу диагностикасының нәтижесі, бақылау ұпайлары, үй тапсырмасының нәтижелері және топтағы рейтинг</h4>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<h4>Успех ученика всегда под контролем преподавателя</h4>
-		</div>		
-	</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Оқушының жетістігі әрдайым мұғалімнің бақылауында болады</h4>
+			</div>		
+		</div>				
+	{% else %}
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Ученик получает всё необходимое в онлайн-модуле: теорию, тесты, и домашние задания — не придётся ничего искать</h4> 
+			</div>
+		</div>
+		<div class="row">		
+			<div class="col-md-12">
+				<h4>А чтобы закрепить знания - проводим еженедельные практикумы</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h4>А ещё наша платформа показывает прогресс: результат входной диагностики знаний, баллы за контрольные, результаты домашних заданий и рейтинг в группе</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Успех ученика всегда под контролем преподавателя</h4>
+			</div>		
+		</div>				
+	{% endif %}		
 </div>
 <div class="div-button-left">
 	<button onclick="location.href='{% url 'claim_create' %}'" class="btn btn-outline-info">{% trans "claim create" %}</button>	
 </div>
 <hr>
 <div class="div-width-100-text-center">
-	<h3>6 причин обучаться у нас</h3>
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h3>Бізде оқудың 6 себебі</h3>			
+	{% else %}
+		<h3>6 причин обучаться у нас</h3>			
+	{% endif %}	
 </div>
 <div class="part4" >
-	<div class="row" style="margin-top: 100px;">
-		<div class="col-md-4">	
-			<h2>01</h2>
-			<p>Авторская программа по комплексной подготовке к ЕНТ</p>			
+	{% if LANGUAGE_CODE == 'kk' %}
+		<div class="row" style="margin-top: 100px;">
+			<div class="col-md-4">	
+				<h2>01</h2>
+				<p>ЕНТ-ға кешенді дайындық бойынша авторлық бағдарлама</p>			
+			</div>
+			<div class="col-md-4">	
+				<h2>02</h2>
+				<p>KASIP авторлық цифрлық кәсіптік бағдар беру жүйесі (Мамандық таңдау кезінде көмек)</p>
+			</div>
+			<div class="col-md-4">	
+				<h2>03</h2>
+				<p>Әр түрлі тақырыптағы психологиялық және дамытушылық тренингтер</p>
+			</div>
 		</div>
-		<div class="col-md-4">	
-			<h2>02</h2>
-			<p>KASIP авторская цифровая профориентационная система (помощь при выборе профессии)</p>
+		<div class="row" style="margin-top: 100px;">
+			<div class="col-md-4">	
+				<h2>04</h2>
+				<p>Ұлттық тестілеу орталығы базасында ай сайынғы тегін сынақ тестілері</p>			
+			</div>
+			<div class="col-md-4">	
+				<h2>05</h2>
+				<p>Әр оқушы үшін әр пән бойынша үлгерім мониторингі</p>
+			</div>
+			<div class="col-md-4">	
+				<h2>06</h2>
+				<p>Серіктес ЖОО-дан EDTECH орталығының түлектерін оқытуға жеңілдіктер</p>
+			</div>
+		</div>				
+	{% else %}
+		<div class="row" style="margin-top: 100px;">
+			<div class="col-md-4">	
+				<h2>01</h2>
+				<p>Авторская программа по комплексной подготовке к ЕНТ</p>			
+			</div>
+			<div class="col-md-4">	
+				<h2>02</h2>
+				<p>KASIP авторская цифровая профориентационная система (помощь при выборе профессии)</p>
+			</div>
+			<div class="col-md-4">	
+				<h2>03</h2>
+				<p>Психологические и развивающие тренинги на разные темы</p>
+			</div>
 		</div>
-		<div class="col-md-4">	
-			<h2>03</h2>
-			<p>Психологические и развивающие тренинги на разные темы</p>
-		</div>
-	</div>
-	<div class="row" style="margin-top: 100px;">
-		<div class="col-md-4">	
-			<h2>04</h2>
-			<p>Ежемесячные бесплатные пробные тестирования на базе Национального центра тестирования</p>			
-		</div>
-		<div class="col-md-4">	
-			<h2>05</h2>
-			<p>Мониторинг успеваемости по каждому предмету для каждого ученика</p>
-		</div>
-		<div class="col-md-4">	
-			<h2>06</h2>
-			<p>Скидки на обучение выпускникам центра EDTECH от ВУЗ-партнеров</p>
-		</div>
-	</div>
+		<div class="row" style="margin-top: 100px;">
+			<div class="col-md-4">	
+				<h2>04</h2>
+				<p>Ежемесячные бесплатные пробные тестирования на базе Национального центра тестирования</p>			
+			</div>
+			<div class="col-md-4">	
+				<h2>05</h2>
+				<p>Мониторинг успеваемости по каждому предмету для каждого ученика</p>
+			</div>
+			<div class="col-md-4">	
+				<h2>06</h2>
+				<p>Скидки на обучение выпускникам центра EDTECH от ВУЗ-партнеров</p>
+			</div>
+		</div>				
+	{% endif %}
 </div>
 <div class="div-button-left">
 	<button onclick="location.href='{% url 'claim_create' %}'" class="btn btn-outline-info">{% trans "claim create" %}</button>	
 </div>
 <hr>
 <div class="div-width-100-text-center">
-	<h3>ВУЗы партнеры</h3>
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h3>Серіктес ЖОО</h3>			
+	{% else %}
+		<h3>ВУЗы партнеры</h3>			
+	{% endif %}
 </div>
 <div class="row" style="background-color: white; padding:30px">
 	<div class="col-md-2">
@@ -225,7 +368,11 @@
 </div>
 <hr>
 <div class="div-width-100-text-center">
-	<h3>Отзывы</h3>
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h3>Пікірлер</h3>			
+	{% else %}
+		<h3>Отзывы</h3>			
+	{% endif %}	
 </div>
 <div class="reviews">
 	<div class="row">
@@ -254,7 +401,11 @@
 </div>
 <hr>
 <div class="div-width-100-text-center">
-	<h3>Наши преподаватели...</h3>
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h3>Біздің мұғалімдер...</h3>					
+	{% else %}
+		<h3>Наши преподаватели...</h3>					
+	{% endif %}
 </div>
 <div class="teachers">
 	<div class="row">

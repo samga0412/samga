@@ -3,12 +3,21 @@
 {% block title %}{% endblock title %}
 {% block header %}{% endblock header %} 
 {% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "contacts" %}</h3>
+</div>
+<br>
 <div class="row">
 	<div class="col-md-3">
-		<h5 align="center">{% trans "contacts" %}</h5>
-		<h3 align="center">Samga Academy</h3>
-		<h5 align="center">Образовательный центр</h5>
-		<p>306 кабинет, ул. Воинов-интернационалистов 51/4, Караганда 100000</p>
+		{% if LANGUAGE_CODE == 'kk' %}
+			<h3 align="center">Samga Academy</h3>
+			<h5 align="center">Білім беру орталығы</h5>
+			<p>306 кабинет, интернационалист-жауынгерлер көшесі 51/4, Қарағанды 100000</p>
+		{% else %}
+			<h3 align="center">Samga Academy</h3>
+			<h5 align="center">Образовательный центр</h5>
+			<p>306 кабинет, ул. Воинов-интернационалистов 51/4, Караганда 100000</p>						
+		{% endif %}
 		<address>
 			<a href="mailto:info@avcgroup.kz">info@avcgroup.kz</a>						
 		</address>				

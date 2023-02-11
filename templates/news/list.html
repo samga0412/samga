@@ -4,9 +4,11 @@
 {% block title %}{% trans "newss" %}{% endblock title %}
 {% block header %}{% endblock header %}
 {% block content %}
-<h2>{% trans "newss" %}</h2>
-	{% load humanize %}
-
+<div class="div-width-100-text-center">
+	<h3>{% trans "newss" %}</h3>
+</div>
+<br>
+{% load humanize %}
 {% if news.count > 0 %}
 <div class="row">
 	<table id="myTable" style="width:100%">

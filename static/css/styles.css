@@ -2,6 +2,7 @@
 :root {	
 	/* Основные цвета */
 	--navbar-background-color: DarkTurquoise;
+	--navbar-text-color: LightCyan;	
 	--main-background-color-light: LightCyan;
 	--main-background-color-dark: PaleTurquoise;
 	--main-text-color: MediumBlue;
@@ -12,6 +13,7 @@
 	--footer-text-color: Bslack;
 	--card-background-color-light: LightCyan;
 	--card-background-color-dark: PaleTurquoise;
+	--card-text-color: MediumBlue;
 	--table-background-color-light: LightCyan; 
 	--table-background-color-dark: PaleTurquoise; 
 	--table-text-color: DarkRed;	
@@ -20,54 +22,68 @@
 	--star-color: Yellow;
 	--star-background: Gold ;
 }
-
 /*  Навигационное меню */
 .navbar {
-	background-color: var(--main-background-color-dark);		
-	color: var(--main-header-color);
+	background-color: var(--navbar-background-color);		
+	color: var(--navbar-text-color);
 }
 .navbar .navbar-nav,
 .navbar .navbar-nav .navbar-text {
-	color: var(--main-header-color);
+	color: var(--navbar-text-color);
 }
 .navbar ul {
-	background-color: var(--main-background-color-dark);
-	color: var(--main-header-color);
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);
 }
 .navbar li {
-	background-color: var(--main-background-color-dark);
-	color: var(--main-header-color);
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);
 }
 .navbar a {
-	background-color: var(--main-background-color-dark);
-	color: var(--main-header-color);	
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);	
 }
 .navbar-brand {
-	background-color: var(--main-background-color-dark);
-	color: var(--main-header-color);	
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);	
 }
 .navbar-brand a {
-	background-color: var(--main-background-color-dark);
-	color: var(--main-header-color);
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);
 	font-weight: bold;
 	font-size: 1.875em;
 }
+.nav-link a {
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);	
+}
+.nav-link a:hover {
+    background-color: var(--main-background-color)
+    text-decoration: underline; /* Добавляем подчёркивание */
+}
+
+.nav-item {
+	background-color: var(--navbar-background-color);
+	color: var(--navbar-text-color);
+	font-weight: bold;
+}
 /* Цвет пунктов навигационного меню */
-.navbar-default .navbar-collapse  {
-	background-color: var(--main-background-color-dark);
-    color: var(--main-header-color);
-}
-.navbar-nav a {
-	background-color: var(--main-background-color-dark);
-    color: var(--main-header-color);
-}
-.navbar-nav li {
-	background-color: var(--main-background-color-dark);
-    color: var(--main-header-color);
-}
-.dropdown-divider{
-	background-color: var(--main-header-color);
-}
+/* .navbar-default .navbar-collapse  { */
+	/* background-color: var(--navbar-background-color); */
+    /* color: var(--navbar-text-color); */
+/* } */
+/* .navbar-nav a { */
+	/* background-color: var(--navbar-background-color); */
+    /* color: var(--navbar-text-color); */
+/* } */
+/* .navbar-nav li a { */
+	/* background-color: var(--navbar-background-color); */
+    /* color: var(--navbar-text-color); */
+/* } */
+/* .dropdown-divider{ */
+	/* background-color: var(--navbar-text-color); */
+/* } */
+
 /* Основная часть */
 body {
 	background-color: var(--main-background-color-light);  	
@@ -419,10 +435,10 @@ pre {
 	vertical-align: top;
 }
 .table-manager tbody tr:nth-child(odd){
-	background: LightCyan;
+	background: var(--table-background-color-light);
 }
 .table-manager tbody tr:nth-child(even){
-	background: LightCyan;
+	background: var(--table-background-color-dark);
 }
 .table-manager tbody tr td:first-child {
 	border-radius: 2px 0 0 2px;
@@ -430,8 +446,6 @@ pre {
 .table-manager tbody tr td:last-child {
 	border-radius: 0 2px 2px 0;
 }
-
-
 .social {
   /*background: #F0F8FF url(../images/projects01.jpg) top center no-repeat;*/
 	width: 100%;
@@ -461,7 +475,6 @@ pre {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 /* header */ 
 header {
 	background-color: Aquamarine;

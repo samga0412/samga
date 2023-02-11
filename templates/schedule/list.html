@@ -3,7 +3,10 @@
 {% block title %}{% trans "schedules" %}{% endblock title %}
 {% block header %}{% endblock header %}
 {% block content %}
-<h2>{% trans "schedules" %}</h2>
+<div class="div-width-100-text-center">
+	<h3>{% trans "schedules" %}</h3>
+</div>
+<br>
 {% if schedule.count > 0 %}
 <div class="row">
 	<table id="myTable" class="table-manager" style="width:100%">

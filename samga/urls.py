@@ -28,6 +28,7 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('contact/', views.contact, name='contact'),
     path('faq/', views.faq, name='faq'),
+    path('i18n/', include('django.conf.urls.i18n')),
 
     path('cabinet/', views.cabinet, name='cabinet'),
 
