@@ -41,7 +41,7 @@ def group_required(*group_names):
 # Стартовая страница 
 def index(request):
     reviews = Reviews.objects.exclude(rating=None).order_by('?')[0:4]
-    teachers = Teachers.objects.all().order_by('?')[0:4]   
+    teachers = Teachers.objects.all().order_by('?')[0:6]   
     return render(request, "index.html", {"reviews": reviews, "teachers": teachers})    
 
 # Контакты

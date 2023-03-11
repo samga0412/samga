@@ -1,20 +1,20 @@
 /* Переменные */
 :root {	
 	/* Основные цвета */
-	--navbar-background-color: DarkTurquoise;
-	--navbar-text-color: LightCyan;	
-	--main-background-color-light: LightCyan;
+	--navbar-background-color: Beige;
+	--navbar-text-color: Maroon;	
+	--main-background-color-light: Snow;
 	--main-background-color-dark: PaleTurquoise;
 	--main-text-color: MediumBlue;
 	--main-header-color: MidnightBlue;
 	--main-text-attention-color: Purple;
-	--footer-background-color-light: LightCyan;
+	--footer-background-color-light: Snow;
 	--footer-background-color-dark: DodgerBlue;
 	--footer-text-color: Bslack;
-	--card-background-color-light: LightCyan;
+	--card-background-color-light: Snow;
 	--card-background-color-dark: PaleTurquoise;
 	--card-text-color: MediumBlue;
-	--table-background-color-light: LightCyan; 
+	--table-background-color-light: Snow; 
 	--table-background-color-dark: PaleTurquoise; 
 	--table-text-color: DarkRed;	
 	/* Звездочки в оценке */
@@ -213,11 +213,28 @@ pre {
 .div-width-100-text-center h3{
   color: AntiqueWhite;		   
 }
+/* Отдельные разделы */
+.part0{
+	background-image: linear-gradient(top, Beige, Snow);
+	background-image: -o-linear-gradient(top, Beige, Snow);
+	background-image: -moz-linear-gradient(top, Beige, Snow);
+	background-image: -webkit-linear-gradient(top, Beige, Snow);	
+	background-size: cover;
+	width: 100%;
+	margin-top: 20px;    
+	margin-bottom: 20px; 
+	padding: 20px;  
+}
+
 
  
 /* Отдельные разделы */
 .part1 {
-	background: #F0F8FF url(../images/background02.jpg) top center no-repeat;
+	background-image: linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -o-linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -moz-linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -webkit-linear-gradient(top, LightGoldenrodYellow, LightYellow);	
+	background-size: cover;
 	background-size: cover;
 	width: 100%;
     margin-top: 20px;    
@@ -231,7 +248,10 @@ pre {
 }
 
 .part2 {
-	background: #F0F8FF url(../images/background03.jpg) top center no-repeat;
+	background-image: linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -o-linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -moz-linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -webkit-linear-gradient(top, LightGoldenrodYellow, LightYellow);	
 	background-size: cover;
 	width: 100%;
 	height: auto; 
@@ -254,7 +274,10 @@ pre {
 }
   
 .part3 {
-	background: #F0F8FF url(../images/background04.jpg) top center no-repeat;
+	background-image: linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -o-linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -moz-linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -webkit-linear-gradient(top, LightGoldenrodYellow, LightYellow);	
 	background-size: cover;
 	width: 100%;
 	height: auto; 
@@ -271,7 +294,10 @@ pre {
 }
 
 .part4 {
-	background: #F0F8FF url(../images/background07.jpg) top center no-repeat;
+	background-image: linear-gradient(top, LightGreen, PaleGreen);
+	background-image: -o-linear-gradient(top, LightGreen), PaleGreen);
+    background-image: -moz-linear-gradient(top, LightGreen), PaleGreen);
+    background-image: -webkit-linear-gradient(top, LightGreen, PaleGreen);
 	background-size: cover;
 	width: 100%;
     margin-top: 20px;    
@@ -279,19 +305,22 @@ pre {
 	padding: 20px;  
 }
 
-.part4 h2{
+.part4 h3{
 	text-align: center;
-	color: AntiqueWhite;  
+	color: Goldenrod;  
 	margin: 10px;    
 }
 .part4 p{
-	color: AntiqueWhite;
+	color: Goldenrod;
 	text-align: center;	
 	font-weight: bold;  	
 }
 
 .reviews {
-	background-color: var(--main-background-color-dark);
+	background-image: linear-gradient(top, PaleTurquoise, LightCyan);
+	background-image: -o-linear-gradient(top, PaleTurquoise, LightCyan);
+    background-image: -moz-linear-gradient(top, PaleTurquoise, LightCyan);
+    background-image: -webkit-linear-gradient(top, PaleTurquoise, LightCyan);
 	background-size: cover;
 	width: 100%;
     margin-top: 20px;    
@@ -300,7 +329,10 @@ pre {
 }
 
 .teachers {
-	background-color: var(--main-background-color-dark);
+	background-image: linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -o-linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -moz-linear-gradient(top, LightGoldenrodYellow, LightYellow);
+	background-image: -webkit-linear-gradient(top, LightGoldenrodYellow, LightYellow);		
 	background-size: cover;
 	width: 100%;
     margin-top: 20px;    

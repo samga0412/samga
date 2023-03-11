@@ -30,6 +30,12 @@
 						<img style="width:100%; max-width:400px;" src="{% static 'images/news6.jpeg' %}" alt="{{ news.title }}" title="{{ news.details }}">    
 					{% elif news.photo.url == "/ media /images/news7.jpeg" %}
 						<img style="width:100%; max-width:400px;" src="{% static 'images/news7.jpeg' %}" alt="{{ news.title }}" title="{{ news.details }}">    
+					{% elif news.photo.url == "/ media /images/news8.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news8.jpeg' %}" alt="{{ news.title }}" title="{{ news.details }}">    
+					{% elif news.photo.url == "/ media /images/news9.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news9.jpeg' %}" alt="{{ news.title }}" title="{{ news.details }}">    
+					{% elif news.photo.url == "/ media /images/news10.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news10.jpeg' %}" alt="{{ news.title }}" title="{{ news.details }}">    
 					{% else %}
 						{% if news.photo.url != None %}
 							<img style="width:100%; max-width:400px;" src="{{ news.photo.url}}" alt="{{ news.title }}" title="{{ news.details }}">

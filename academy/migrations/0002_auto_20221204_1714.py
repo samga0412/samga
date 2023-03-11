@@ -5,7 +5,8 @@ from django.db import migrations
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
 
-import datetime
+from datetime import datetime, timedelta
+import time
 
 def beginning(apps, schema_editor):
     
@@ -13,7 +14,7 @@ def beginning(apps, schema_editor):
     user = User.objects.create_superuser(username='root',
     email='samga0412@mail.ru',
     password='SsNn5678+-@', 
-    last_login=datetime.datetime.now())
+    last_login=datetime.now())
     print("Суперпользователь создан")
     
     # Группа менеджеров
@@ -22,36 +23,36 @@ def beginning(apps, schema_editor):
     print("Группа менеджеров создана")
     
     # Пользователь с ролью менеджера id2
-    user = User.objects.create_user(username='manager', password='Ss0066+-', email='manager@mail.ru', first_name='Менеджер', last_name='', last_login=datetime.datetime.now())
+    user = User.objects.create_user(username='manager', password='Ss0066+-', email='manager@mail.ru', first_name='Менеджер', last_name='', last_login=datetime.now())
     managers.user_set.add(user)
     print("Менеджер добавлен в группу менеджеров")
 
     # Простые пользователи (заявители) id3-27
-    user = User.objects.create_user(username='user1', password='Uu0066+-', email='user1@mail.ru', first_name='Дина', last_name='Мусина', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user2', password='Uu0066+-', email='user2@mail.ru', first_name='Адия', last_name='Жунусова', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user3', password='Uu0066+-', email='user3@mail.ru', first_name='Айнура', last_name='Кенина', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user4', password='Uu0066+-', email='user4@mail.ru', first_name='Рустем', last_name='Какимов', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user5', password='Uu0066+-', email='user5@mail.ru', first_name='Алишер', last_name='Кабдуалиев', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user6', password='Uu0066+-', email='user6@mail.ru', first_name='Бауржан', last_name='Арыкбаев', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user7', password='Uu0066+-', email='user7@mail.ru', first_name='Алишер', last_name='Танатаров', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user8', password='Uu0066+-', email='user8@mail.ru', first_name='Мерует', last_name='Искакова', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user9', password='Uu0066+-', email='user9@mail.ru', first_name='Ольга', last_name='Муравьева', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user10', password='Uu0066+-', email='user10@mail.ru', first_name='Ақжарқын', last_name='Сансызбаева', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user11', password='Uu0066+-', email='user11@mail.ru', first_name='Арайлым', last_name='Алматова', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user12', password='Uu0066+-', email='user12@mail.ru', first_name='Айгерім', last_name='Дүйсенбиева', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user13', password='Uu0066+-', email='user13@mail.ru', first_name='Салтанат', last_name='Зиноллаева', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user14', password='Uu0066+-', email='user14@mail.ru', first_name='Сейтқасым', last_name='Болат', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user15', password='Uu0066+-', email='user15@mail.ru', first_name='Сара', last_name='Фазилова', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user16', password='Uu0066+-', email='user16@mail.ru', first_name='Бектас', last_name='Ерсейіт', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user17', password='Uu0066+-', email='user17@mail.ru', first_name='Диас', last_name='Мырзаш', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user18', password='Uu0066+-', email='user18@mail.ru', first_name='Нұржан', last_name='Жүрсінбек', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user19', password='Uu0066+-', email='user19@mail.ru', first_name='Дина', last_name='Жағыпар', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user20', password='Uu0066+-', email='user20@mail.ru', first_name='Жастілек', last_name='Жасталап', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user21', password='Uu0066+-', email='user21@mail.ru', first_name='Еркебұлан', last_name='Қадыхан', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user22', password='Uu0066+-', email='user22@mail.ru', first_name='Молдир', last_name='Бутабекова', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user23', password='Uu0066+-', email='user23@mail.ru', first_name='Аружан', last_name='Таурбекова', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user24', password='Uu0066+-', email='user24@mail.ru', first_name='Алтынай', last_name='Қожанова', last_login=datetime.datetime.now())
-    user = User.objects.create_user(username='user25', password='Uu0066+-', email='user25@mail.ru', first_name='Эльнара', last_name='Иминова', last_login=datetime.datetime.now())
+    user = User.objects.create_user(username='user1', password='Uu0066+-', email='user1@mail.ru', first_name='Дина', last_name='Мусина', last_login=datetime.now())
+    user = User.objects.create_user(username='user2', password='Uu0066+-', email='user2@mail.ru', first_name='Адия', last_name='Жунусова', last_login=datetime.now())
+    user = User.objects.create_user(username='user3', password='Uu0066+-', email='user3@mail.ru', first_name='Айнура', last_name='Кенина', last_login=datetime.now())
+    user = User.objects.create_user(username='user4', password='Uu0066+-', email='user4@mail.ru', first_name='Рустем', last_name='Какимов', last_login=datetime.now())
+    user = User.objects.create_user(username='user5', password='Uu0066+-', email='user5@mail.ru', first_name='Алишер', last_name='Кабдуалиев', last_login=datetime.now())
+    user = User.objects.create_user(username='user6', password='Uu0066+-', email='user6@mail.ru', first_name='Бауржан', last_name='Арыкбаев', last_login=datetime.now())
+    user = User.objects.create_user(username='user7', password='Uu0066+-', email='user7@mail.ru', first_name='Алишер', last_name='Танатаров', last_login=datetime.now())
+    user = User.objects.create_user(username='user8', password='Uu0066+-', email='user8@mail.ru', first_name='Мерует', last_name='Искакова', last_login=datetime.now())
+    user = User.objects.create_user(username='user9', password='Uu0066+-', email='user9@mail.ru', first_name='Ольга', last_name='Муравьева', last_login=datetime.now())
+    user = User.objects.create_user(username='user10', password='Uu0066+-', email='user10@mail.ru', first_name='Ақжарқын', last_name='Сансызбаева', last_login=datetime.now())
+    user = User.objects.create_user(username='user11', password='Uu0066+-', email='user11@mail.ru', first_name='Арайлым', last_name='Алматова', last_login=datetime.now())
+    user = User.objects.create_user(username='user12', password='Uu0066+-', email='user12@mail.ru', first_name='Айгерім', last_name='Дүйсенбиева', last_login=datetime.now())
+    user = User.objects.create_user(username='user13', password='Uu0066+-', email='user13@mail.ru', first_name='Салтанат', last_name='Зиноллаева', last_login=datetime.now())
+    user = User.objects.create_user(username='user14', password='Uu0066+-', email='user14@mail.ru', first_name='Сейтқасым', last_name='Болат', last_login=datetime.now())
+    user = User.objects.create_user(username='user15', password='Uu0066+-', email='user15@mail.ru', first_name='Сара', last_name='Фазилова', last_login=datetime.now())
+    user = User.objects.create_user(username='user16', password='Uu0066+-', email='user16@mail.ru', first_name='Бектас', last_name='Ерсейіт', last_login=datetime.now())
+    user = User.objects.create_user(username='user17', password='Uu0066+-', email='user17@mail.ru', first_name='Диас', last_name='Мырзаш', last_login=datetime.now())
+    user = User.objects.create_user(username='user18', password='Uu0066+-', email='user18@mail.ru', first_name='Нұржан', last_name='Жүрсінбек', last_login=datetime.now())
+    user = User.objects.create_user(username='user19', password='Uu0066+-', email='user19@mail.ru', first_name='Дина', last_name='Жағыпар', last_login=datetime.now())
+    user = User.objects.create_user(username='user20', password='Uu0066+-', email='user20@mail.ru', first_name='Жастілек', last_name='Жасталап', last_login=datetime.now())
+    user = User.objects.create_user(username='user21', password='Uu0066+-', email='user21@mail.ru', first_name='Еркебұлан', last_name='Қадыхан', last_login=datetime.now())
+    user = User.objects.create_user(username='user22', password='Uu0066+-', email='user22@mail.ru', first_name='Молдир', last_name='Бутабекова', last_login=datetime.now())
+    user = User.objects.create_user(username='user23', password='Uu0066+-', email='user23@mail.ru', first_name='Аружан', last_name='Таурбекова', last_login=datetime.now())
+    user = User.objects.create_user(username='user24', password='Uu0066+-', email='user24@mail.ru', first_name='Алтынай', last_name='Қожанова', last_login=datetime.now())
+    user = User.objects.create_user(username='user25', password='Uu0066+-', email='user25@mail.ru', first_name='Эльнара', last_name='Иминова', last_login=datetime.now())
     print("Созданы простые пользователи")
         
     ##### Новости #####
@@ -121,7 +122,7 @@ def beginning(apps, schema_editor):
     #news.save()
     
     news = News()
-    news.daten = '2022-07-23 12:00:00'
+    news.daten = datetime.now() - timedelta(days=60)
     news.title = 'Тамыз айына тіркеудің басталу күні айтылды ЕНТ'
     news.details = """Тамыздағы ақылы ҰБТ-ға тіркелу 25-30 шілде аралығында өтеді.
     Тамыз айына тіркелу сайтта өтеді app.testcenter.kz 25-30 шілде аралығында. Тестілеудің өзі 10-13 тамыз аралығында өтеді."""
@@ -129,7 +130,7 @@ def beginning(apps, schema_editor):
     news.save()
     
     news = News()
-    news.daten = '2022-07-31 13:00:00'
+    news.daten = datetime.now() - timedelta(days=50)
     news.title = 'Қазақстандық оқушылар халықаралық олимпиадаларда 23 медаль жеңіп алды'
     news.details =  """Қазақстандық оқушылар ең беделді халықаралық пәндік олимпиадаларда 3 алтын, 13 күміс және 7 қола медаль жеңіп алды.
     Осылайша, аралық қорытындылар бойынша құрама қоржынында 6 пән бойынша 23 медаль бар, деп хабарлайды ҚР Білім министрлігінің баспасөз қызметі.
@@ -139,7 +140,7 @@ def beginning(apps, schema_editor):
     news.save()
     
     news = News()
-    news.daten = '2022-09-01 13:00:00'
+    news.daten = datetime.now() - timedelta(days=45)
     news.title = 'Қазақстанда жоғары оқу орындарында оқуға жеңілдікті кредиттер пайда болады'
     news.details = """Қазақстан президенті Қасым-Жомарт Тоқаев студенттерге грант бөлудің жаңа шараларын ұсынды
     Мемлекет басшысы отандық жоғары оқу орындарының сапасы артқан сайын оларда оқу құны да артатынын айтты.
@@ -148,7 +149,7 @@ def beginning(apps, schema_editor):
     news.save()
     
     news = News()
-    news.daten = '2022-09-03 14:00:00'
+    news.daten = datetime.now() - timedelta(days=40)
     news.title = 'Жаңа гранттар жүйесі мен оқу несиелері туралы министр айтты'
     news.details = """Ғылым және жоғары білім министрі Саясат Нұрбек Қазақстанда білім беру гранттарын бөлудің жаңа жүйесі қалай жұмыс істейтінін айтты.
     Саясат Нұрбек министрлікте сараланған грантты енгізу тәсілдері пысықталып жатқанын айтты. Оның айтуынша, Президенттің бұл тапсырмасы демографиялық үрдістер мен оқу құнының өсуі тұрғысынан өте өзекті.
@@ -157,7 +158,7 @@ def beginning(apps, schema_editor):
     news.save()
     
     news = News()
-    news.daten = '2022-09-19 15:00:00'
+    news.daten = datetime.now() - timedelta(days=35)
     news.title = 'Ерекшеленгендерге-гранттар: қызмет еткен қазақстандықтар ЖОО-ға онсыз түсе алады ЕНТ'
     news.details = """Мерзімді әскери қызмет өткерген қазақстандықтар ҰБТ балдарын есепке алмай ЖОО-ға түсе алады, ал ерекшеленген мерзімділерге гранттар беріледі. Бұл туралы Қорғаныс министрлігінің баспасөз қызметі хабарлады.
     Қорғаныс министрлігі мен ғылым және жоғары білім министрлігінің бірлескен жобасы мерзімді әскери қызметті өткерген барлық азаматтарға ҰБТ нәтижелерін есепке алмай, әңгімелесу нәтижелері бойынша мерзімді әскери қызметті өткергеннен кейін екі жыл ішінде ақылы негізде ЖОО-ға оқуға түсу мүмкіндігін беруді көздейді."""
@@ -165,7 +166,7 @@ def beginning(apps, schema_editor):
     news.save()
     
     news = News()
-    news.daten = '2022-09-21 16:00:00'
+    news.daten = datetime.now() - timedelta(days=30)
     news.title = 'Қазақстандық оқушыларға арналған тегін бейне сабақтар пайда болды'
     news.details = """Қазақстандық оқушылар онлайн сабақтарға тегін қол жеткізді.
     1-11 сынып оқушылары сайтта онлайн-репетиторлық сабақтарды еркін ала алады Mektep-online.kz және аттас YouTube арнасында мектеп бағдарламасының негізгі пәндері бойынша екі тілде.
@@ -174,13 +175,43 @@ def beginning(apps, schema_editor):
     news.save()
     
     news = News()
-    news.daten = '2022-09-23 17:00:00'
+    news.daten = datetime.now() - timedelta(days=25)
     news.title = '"IELTS және TOEFL сияқты". Қазақстанда ҰБТ форматын өзгерту жоспарлануда'
     news.details = """Ұлттық бірыңғай тестілеу (ҰБТ) форматын Қазақстанда IELTS және TOEFL форматтарына жақындата отырып өзгерту жоспарлануда. Бұл туралы ғылым және жоғары білім министрі Саясат Нұрбек хабарлады.
     Саясат Нұрбек бейнебақылау камераларын көргеннен кейін 153 мектеп түлегінің ҰБТ нәтижелерінің күшін жою туралы пікір білдірді. Министр бұл тәжірибе әділ емес екенін атап өтті.
     "Тест тапсырушы талапкердің кез келген заңсыз әрекеттерін автоматты режимде тіркеу үшін прокторинг жүйесі - камера, екі бұрыштан бейнебақылау енгізілді. Осыдан кейін бейне материалға талдау жасалады және бұзушылық болған-болмағаны жазылады. Осы талдаудың қорытындысы бойынша күшін жою туралы шешім қабылданады. Келісемін, белгілі бір уақыт өткеннен кейін грантты алу әділетті емес. Сондықтан біз қазір екі бағыт бойынша өте маңызды жұмыс жүргізіп жатырмыз", - деді министр ОКҚ брифингінде.
     Біріншіден, оның айтуынша, елімізде ҰБТ форматы мен оның мазмұндық бөлігі қайта қаралады. Тест тек дұрыс және бұрыс жауап нұсқаларын беріп қана қоймай, функционалдық сауаттылықты, дайындық деңгейін және білімдегі олқылықтарды тексереді. """
     news.photo = 'images/news7.jpeg' 
+    news.save()
+        
+    news = News()
+    news.daten = datetime.now() - timedelta(days=20)
+    news.title = 'Қаңтар айындағы ҰБТ-ның қорытындылары'
+    news.details = """Қаңтар ҰБТ-сын 123 мыңға жуық адам тапсырды. Оның ішінде түлектердің 77% – ы қазақ тілінде, 23% - ы орыс тілінде, 91 адам ағылшын тілінде тестілеуден өтті.
+    ҰБТ басталғалы шекті балды 83%-ға жуық талапкер жинап, 21 мыңнан астамы (17%-ы) шекті балл жинай алмады. 
+    ҰБТ орташа балы 76 балды құрады. Ең жоғары балл – 139.
+    «Қаңтар ҰБТ-сы 10 қаңтар-10 ақпан аралығында өтті. Жалпы, қаңтардағы ұлттық бірыңғай тестілеуге 123 мыңға жуық адам қатысты. Тестіленушілердің ең көп таңдаған комбинациясы - «Математика-Физика» (19%). Тапсырушылардың 18%-ы «Биология-Химия» комбинациясын таңдаса, 10%-ы шығармашылық емтиханды таңдаған. IT бағыттарға түсуге қажетті жаңа «Математика-Информатика» комбинациясын ҰБТ-ға қатысушылардың 10%-ы тапсырған», – деп атап өтті ҚР ҒЖБМ Ұлттық тестілеу орталығының директоры Руслан Емелбаев.
+    Талапкерлердің, соның ішінде ерекше білім беру қажеттіліктері бар талапкерлердің тестілеуді ыңғайлы тапсыруы үшін ҰБТ тапсыру уақыты 40 минутқа ұзартылған. Сонымен қатар, олар үшін сызба және диаграммаларсыз сұрақтар жасалды. Қабылданған шаралар арқасында ерекше білім беру қажеттіліктері бар 274 бала ҰБТ тапсырды. 
+    62 талапкер смартфон, шпаргалка және басқа да тыйым салынған заттарды алып өту әрекеті салдарынан тест тапсыру мүмкіндігінен айырылды. Тестілеу кезінде ережелерді бұзғаны үшін аудиториядан 98 адам шығарылып, олардың нәтижелері жойылды. Өзге тұлғалар анықталған жоқ.
+    Естеріңізге сала кетсек, ҰБТ-ға дайындықты жақсарту мақсатында Ұлттық тестілеу орталығы оқу жылының басында тестілеу пәнінің спецификацияларын, тест жоспарын, Қазақстан тарихы және Дүниежүзі тарихынан 100 дата, Информатикадан терминдер тізімін, Қазақ әдебиеті және орыс әдебиеті пәндерінен шығармалар тізімін өз сайтында және әлеуметтік желілерінде жариялады."""
+    news.photo = 'images/news8.jpeg' 
+    news.save()
+    
+    news = News()
+    news.daten = datetime.now() - timedelta(days=15)
+    news.title = 'Қаңтар айындағы ҰБТ-ның аралық қорытындылары'
+    news.details = """Қаңтар айындағы ҰБТ басталғалы бері 57 мың адам тест тапсырды.
+    Оның ішінде: талапкерлердің 78% – ға жуығы шекті балл жинады; орташа балл – 70 балл; ерекше білім беру қажеттілігі бар 93 бала қатысты. Ереже бұзғаны үшін 93 адамның нәтижелері жойылды. Атап өтсек:
+    смартфон, шпаргалка және басқа да тыйым салынған заттарды алып өту әрекеті салдарынан 36 талапкер тест тапсыру мүмкіндігінен айырылды; тестілеу кезінде ережелерді бұзғаны үшін аудиториядан 57 адам шығарылды; бөгде тұлғалар анықталған жоқ. Қатысушылардың басым бөлігі, яғни 19%-ы «Математика-физика» және 18%-ы «Биология-Химия» пәндер комбинациясын таңдаған. Сондай-ақ IT бағыттарына түсуге қажетті жаңа «Математика-Информатика» комбинациясын ҰБТ-ға қатысушылардың 9%-ы тапсырған.
+    Естеріңізге сала кетейік, қаңтар айындағы ҰБТ 10 ақпанға дейін өтеді. Қорытынды мәліметтер сол уақытта жарияланады. """
+    news.photo = 'images/news9.jpeg' 
+    news.save()
+    
+    news = News()
+    news.daten = datetime.now() - timedelta(days=10)
+    news.title = 'Әр ҰБТ сайын бейіндік пәндерімді өзгертіп отыруға бола ма?'
+    news.details = """Бұл сұраққа біз бірнеше рет Сіздерге жауап бергенбіз, алайда, қайталап кетудің артықтығы жоқ деп санаймыз. Сонымен, ҚАҢТАР, НАУРЫЗ ЖӘНЕ ТАМЫЗ айларындағы ҰБТ-да ӘРТҮРЛІ БЕЙІНДІК ПӘНДЕР КОМБИНАЦИЯСЫН таңдауға болады. Ал негізгі ҰБТ-ны тапсыруға берілген екі мүмкіндікте де БІР БЕЙІНДІК ПӘНДЕР КОМБИНАЦИЯСЫН таңдай аласыздар. """
+    news.photo = 'images/news10.jpeg' 
     news.save()
     
     print("Новости добавлены")
@@ -189,89 +220,58 @@ def beginning(apps, schema_editor):
     Teachers = apps.get_model("academy", "Teachers")
     
     teachers = Teachers()
-    teachers.surname = 'Ибрагимова' 
-    teachers.name = 'Зарина' 
-    teachers.patronymic = 'Тахировна' 
-    #teachers.details = 'Математическая грамотность' 
-    teachers.details = 'Математикалық сауаттылық' 
+    teachers.surname = 'Шохан' 
+    teachers.name = 'Камила' 
+    teachers.patronymic = '' 
+    #teachers.details = 'История Казахстана' 
+    teachers.details = 'Қазақстан тарихы' 
     teachers.photo = 'images/woman1.jpg' 
     teachers.save()
     
     teachers = Teachers()
-    teachers.surname = 'Зордунова' 
-    teachers.name = 'Анар' 
-    teachers.patronymic = 'Касымжановна' 
-    teachers.details = 'Информатика'
+    teachers.surname = 'Өкеш' 
+    teachers.name = 'Айдана' 
+    teachers.patronymic = '' 
+    #teachers.details = 'Математическая грамотность' 
+    teachers.details = 'Математикалық сауаттылық'
     teachers.photo = 'images/woman2.jpg' 
     teachers.save()
     
     teachers = Teachers()
-    teachers.surname = 'Рахимбаева' 
-    teachers.name = 'Айгерим' 
-    teachers.patronymic = 'Айбековна' 
-    #teachers.details = 'История Казахстана'
-    teachers.details = 'Қазақстан Тарихы'
-    teachers.photo = 'images/woman3.jpg' 
-    teachers.save()
-    
-    teachers = Teachers()
-    teachers.surname = 'Есентаева' 
-    teachers.name = 'Наргиз' 
-    teachers.patronymic = 'Рустемовна' 
-    teachers.details = 'Математика'
-    teachers.photo = 'images/woman4.jpg' 
-    teachers.save()
-    
-    teachers = Teachers()
-    teachers.surname = 'Сорокина' 
-    teachers.name = 'Надежда' 
-    teachers.patronymic = 'Владимировна'
-    teachers.details = 'Физика'
-    teachers.photo = 'images/woman5.jpg' 
-    teachers.save()
-    
-    teachers = Teachers()
-    teachers.surname = 'Оразалиева' 
-    teachers.name = 'Мадина' 
-    teachers.patronymic = 'Сарыпбековна' 
-    teachers.details = 'Химия'
-    teachers.photo = 'images/woman6.jpg' 
-    teachers.save()
-    
-    teachers = Teachers()
-    teachers.surname = 'Прутникова' 
-    teachers.name = 'Кристина' 
-    teachers.patronymic = 'Сергеевна' 
+    teachers.surname = 'Жунусов' 
+    teachers.name = 'Ерхан' 
+    teachers.patronymic = '' 
+    #teachers.details = 'Биология'
     teachers.details = 'Биология'
-    teachers.photo = 'images/woman7.jpg' 
-    teachers.save()
-    
-    teachers = Teachers()
-    teachers.surname = 'Илюбаев' 
-    teachers.name = 'Рахимбек' 
-    teachers.patronymic = 'Максатович' 
-    teachers.details = 'География'
     teachers.photo = 'images/male1.jpg' 
     teachers.save()
     
     teachers = Teachers()
-    teachers.surname = 'Аркинов' 
-    teachers.name = 'Алишер' 
-    teachers.patronymic = 'Мухамедович' 
-    #teachers.details = 'Всемирная история'
-    teachers.details = 'Дүниежүзілік тарих'
+    teachers.surname = 'Абдуллаев' 
+    teachers.name = 'Хамитжан' 
+    teachers.patronymic = ''
+    teachers.details = 'Математика'
     teachers.photo = 'images/male2.jpg' 
     teachers.save()
+
+    teachers = Teachers()
+    teachers.surname = 'Атығаева' 
+    teachers.name = 'Аида' 
+    teachers.patronymic = '' 
+    teachers.details = 'Химия'
+    teachers.photo = 'images/woman3.jpg' 
+    teachers.save()
+    
     
     teachers = Teachers()
-    teachers.surname = 'Сембиев' 
-    teachers.name = 'Алдияр' 
-    teachers.patronymic = 'Нурланович' 
-    #teachers.details = 'Основы права'
-    teachers.details = 'Құқық негіздері'
+    teachers.surname = 'Смагулов' 
+    teachers.name = 'Баян' 
+    teachers.patronymic = '' 
+    #teachers.details = 'История мира'
+    teachers.details = 'Дүние Жүзі тарихы'
     teachers.photo = 'images/male3.jpg' 
     teachers.save()
-
+    
     print("Преподаватели добавлены")
     
     ##### Курсы #####
@@ -804,7 +804,7 @@ def beginning(apps, schema_editor):
     Claim = apps.get_model("academy", "Claim")
 
     claim = Claim()
-    claim.dater = datetime.datetime.now()
+    claim.dater = datetime.now()
     claim.user_id = 25    
     claim.training_id = 2
     #claim.details = 'Прошу записать меня на подготовительные курсы по информатике.'

@@ -38,7 +38,7 @@ msgstr "Курсы"
 #: .\templates\index.html:296 .\templates\teachers\create.html:6
 #: .\templates\teachers\edit.html:6 .\templates\teachers\read.html:7
 msgid "teachers"
-msgstr "Преподаватели"
+msgstr "Наши преподаватели"
 
 #: .\academy\forms.py:101 .\academy\forms.py:122 .\templates\base.html:71
 #: .\templates\groups\create.html:6 .\templates\groups\edit.html:6
@@ -533,7 +533,7 @@ msgstr "Отзывы"
 #: .\templates\teachers\index.html:3 .\templates\teachers\index.html:6
 #: .\templates\teachers\list.html:4 .\templates\teachers\list.html:8
 msgid "teacherss"
-msgstr "Преподаватели"
+msgstr "Наши преподаватели"
 
 #: .\templates\training\index.html:3 .\templates\training\index.html:6
 msgid "trainings"

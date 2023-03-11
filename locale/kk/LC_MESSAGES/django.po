@@ -36,7 +36,7 @@ msgstr "Курстар"
 #: .\templates\index.html:296 .\templates\teachers\create.html:6
 #: .\templates\teachers\edit.html:6 .\templates\teachers\read.html:7
 msgid "teachers"
-msgstr "Мұғалімдер"
+msgstr "Біздің мұғалімдер"
 
 #: .\academy\forms.py:101 .\academy\forms.py:122 .\templates\base.html:71
 #: .\templates\groups\create.html:6 .\templates\groups\edit.html:6
@@ -192,11 +192,11 @@ msgstr "Контактілер"
 
 #: .\templates\base.html:57
 msgid "faq"
-msgstr "Сұрақтарға жауаптар"
+msgstr "Жиі қойылатын сұрақтар"
 
 #: .\templates\base.html:61 .\templates\cabinet.html:7
 msgid "cabinet"
-msgstr "Жеке бөлме"
+msgstr "Жеке кабинет"
 
 #: .\templates\base.html:72 .\templates\members\index.html:3
 #: .\templates\members\index.html:6
@@ -211,7 +211,7 @@ msgstr "Төлемдер"
 #: .\templates\base.html:77 .\templates\claim\index.html:3
 #: .\templates\claim\index.html:6
 msgid "claims"
-msgstr "Қолдану"
+msgstr "Өтінім"
 
 #: .\templates\base.html:79 .\templates\news\index.html:3
 #: .\templates\news\index.html:6 .\templates\news\list.html:4
@@ -344,7 +344,7 @@ msgstr "Көру"
 
 #: .\templates\faq.html:7
 msgid "FAQ"
-msgstr "Сұрақтарға жауаптар"
+msgstr "Жиі қойылатын сұрақтар"
 
 #: .\templates\groups\index.html:3
 msgid "groupss"
@@ -531,7 +531,7 @@ msgstr "Шолулар"
 #: .\templates\teachers\index.html:3 .\templates\teachers\index.html:6
 #: .\templates\teachers\list.html:4 .\templates\teachers\list.html:8
 msgid "teacherss"
-msgstr "Мұғалімдер"
+msgstr "Біздің мұғалімдер"
 
 #: .\templates\training\index.html:3 .\templates\training\index.html:6
 msgid "trainings"
