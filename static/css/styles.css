@@ -104,6 +104,31 @@ pre {
 .control-label, .control-group{	
 	color: var(--main-text-color);
 }
+/*  Акордеон */
+.accordion  {	
+	background-color: var(--card-background-color-light);
+	padding: 10px;
+}
+
+.accordion-item  {	
+	background-color: var(--card-background-color-light);
+	padding: 10px;
+}
+
+.accordion-header  {	
+	background-color: var(--card-background-color-dark);
+	padding: 10px;
+}
+
+.accordion-button {	
+	background-color: var(--card-background-color-dark);
+	padding: 10px;
+}
+
+.accordion-body  {	
+	background-color: var(--card-background-color-light);
+	padding: 10px;
+}
 
 /*  Карточки */
 .card {	
