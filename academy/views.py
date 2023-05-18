@@ -18,6 +18,10 @@ import time
 from django.db import models
 from django.db.models import Q
 
+import csv
+import xlwt
+from io import BytesIO
+
 # Подключение моделей
 from .models import Teachers, Training, Groups, Members, Schedule, Payment, Reviews, Claim, News
 # Подключение форм
@@ -299,7 +303,8 @@ def groups_delete(request, id):
 def groups_read(request, id):
     try:
         groups = Groups.objects.get(id=id) 
-        return render(request, "groups/read.html", {"groups": groups})
+        members = Members.objects.filter(groups_id=id).order_by('groups', 'user')
+        return render(request, "groups/read.html", {"groups": groups, "members": members})
     except Groups.DoesNotExist:
         return HttpResponseNotFound("<h2>Groups not found</h2>")
 
@@ -778,6 +783,92 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
+
+# Экспорт в Excel
+def export_excel(request): 
+    # Create a HttpResponse object and set its content_type header value to Microsoft excel.
+    response = HttpResponse(content_type='application/vnd.ms-excel') 
+    # Set HTTP response Content-Disposition header value. Tell web server client the attached file name is students.xls.
+    response['Content-Disposition'] = 'attachment;filename=report.xls' 
+    # Create a new Workbook file.
+    work_book = xlwt.Workbook(encoding = 'utf-8') 
+    # Create a new worksheet in the above workbook.
+    work_sheet = work_book.add_sheet(u'Catalog Info')
+    # Maintain some worksheet styles，style_head_row, style_data_row, style_green, style_red
+    # This style will be applied to worksheet head row.
+    style_head_row = xlwt.easyxf("""    
+        align:
+          wrap off,
+          vert center,
+          horiz center;
+        borders:
+          left THIN,
+          right THIN,
+          top THIN,
+          bottom THIN;
+        font:
+          name Arial,
+          colour_index white,
+          bold on,
+          height 0xA0;
+        pattern:
+          pattern solid,
+          fore-colour 0x19;
+        """
+    )
+    # Define worksheet data row style. 
+    style_data_row = xlwt.easyxf("""
+        align:
+          wrap on,
+          vert center,
+          horiz left;
+        font:
+          name Arial,
+          bold off,
+          height 0XA0;
+        borders:
+          left THIN,
+          right THIN,
+          top THIN,
+          bottom THIN;
+        """
+    )
+    # Set data row date string format.
+    #style_data_row.num_format_str = 'dd/mm/yyyy'
+    # Define a green color style.
+    style_green = xlwt.easyxf(" pattern: fore-colour 0x11, pattern solid;")
+    # Define a red color style.
+    style_red = xlwt.easyxf(" pattern: fore-colour 0x0A, pattern solid;")
+    # Generate worksheet head row data.
+    work_sheet.write(0,0, str(_('year')), style_head_row) 
+    work_sheet.write(0,1, str(_('month')), style_head_row) 
+    work_sheet.write(0,2, str(_('user')), style_head_row) 
+    work_sheet.write(0,3, str(_('amount')), style_head_row) 
+    work_sheet.write(0,4, str(_('total')), style_head_row) 
+    report = Payment.objects.raw("""
+        SELECT 1 as id, strftime('%Y', payment.datep) as year, strftime('%m', payment.datep) as month, auth_user.last_name, auth_user.first_name, auth_user.username, SUM(payment.amount) AS amount,
+        (SELECT SUM(p.amount) FROM payment p WHERE  p.user_id = payment.user_id) as total
+        FROM payment LEFT JOIN auth_user ON payment.user_id = auth_user.id
+        GROUP BY strftime('%Y', payment.datep), strftime('%m', payment.datep), auth_user.last_name, auth_user.first_name, auth_user.username
+        """)
+    # Generate worksheet data row data.
+    row = 1 
+    for r in report:
+        work_sheet.write(row,0, r.year, style_data_row)
+        work_sheet.write(row,1, r.month, style_data_row)
+        work_sheet.write(row,2, r.last_name + ' ' + r.first_name, style_data_row)
+        work_sheet.write(row,3, r.amount, style_data_row)
+        work_sheet.write(row,4, r.total, style_data_row)
+        row=row + 1 
+    # Create a StringIO object.
+    output = BytesIO()
+    # Save the workbook data to the above StringIO object.
+    work_book.save(output)
+    # Reposition to the beginning of the StringIO object.
+    output.seek(0)
+    # Write the StringIO object's value to HTTP response to send the excel file to the web server client.
+    response.write(output.getvalue()) 
+    return response
 
 # Изменение данных пользователя
 @method_decorator(login_required, name='dispatch')

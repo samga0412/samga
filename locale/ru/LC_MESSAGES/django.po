@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-10 10:18+0600\n"
+"POT-Creation-Date: 2023-05-18 12:16+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: .\academy\forms.py:31 .\academy\forms.py:39 .\academy\forms.py:48
 msgid "Value must start with a capital letter"
-msgstr ""
+msgstr "Значение должно начинаться с заглавной буквы"
 
 #: .\academy\forms.py:80 .\academy\forms.py:191 .\templates\base.html:70
 #: .\templates\cabinet.html:17 .\templates\cabinet.html:22
@@ -35,7 +35,7 @@ msgstr "Курсы"
 
 #: .\academy\forms.py:81 .\templates\base.html:48 .\templates\base.html:69
 #: .\templates\groups\index.html:15 .\templates\groups\read.html:18
-#: .\templates\index.html:296 .\templates\teachers\create.html:6
+#: .\templates\index.html:148 .\templates\teachers\create.html:6
 #: .\templates\teachers\edit.html:6 .\templates\teachers\read.html:7
 msgid "teachers"
 msgstr "Наши преподаватели"
@@ -47,10 +47,11 @@ msgstr "Наши преподаватели"
 msgid "groups"
 msgstr "Учебные группы"
 
-#: .\academy\forms.py:102 .\academy\forms.py:152 .\templates\cabinet.html:24
-#: .\templates\cabinet.html:85 .\templates\claim\edit.html:16
-#: .\templates\members\index.html:14 .\templates\payment\index.html:24
-#: .\templates\payment\index.html:65 .\templates\reviews\index.html:16
+#: .\academy\forms.py:102 .\academy\forms.py:152 .\academy\views.py:845
+#: .\templates\cabinet.html:24 .\templates\cabinet.html:85
+#: .\templates\claim\edit.html:16 .\templates\members\index.html:14
+#: .\templates\payment\index.html:24 .\templates\payment\index.html:68
+#: .\templates\reviews\index.html:16
 msgid "user"
 msgstr "Пользователь"
 
@@ -110,8 +111,8 @@ msgstr "Дата"
 msgid "datep"
 msgstr "Дата"
 
-#: .\academy\models.py:149 .\templates\cabinet.html:86
-#: .\templates\payment\index.html:25 .\templates\payment\index.html:66
+#: .\academy\models.py:149 .\academy\views.py:846 .\templates\cabinet.html:86
+#: .\templates\payment\index.html:25 .\templates\payment\index.html:69
 msgid "amount"
 msgstr "Сумма"
 
@@ -155,6 +156,18 @@ msgstr "Детали новости"
 msgid "photo_news"
 msgstr "Фотография"
 
+#: .\academy\views.py:843 .\templates\payment\index.html:66
+msgid "year"
+msgstr "Год"
+
+#: .\academy\views.py:844 .\templates\payment\index.html:67
+msgid "month"
+msgstr "Месяц"
+
+#: .\academy\views.py:847 .\templates\payment\index.html:70
+msgid "total"
+msgstr "Всего"
+
 #: .\templates\base.html:37 .\templates\registration\logged_out.html:4
 #: .\templates\registration\login.html:4
 #: .\templates\registration\password_change_done.html:3
@@ -178,7 +191,7 @@ msgid "schedule"
 msgstr "Расписание"
 
 #: .\templates\base.html:50 .\templates\base.html:75
-#: .\templates\index.html:244 .\templates\reviews\create.html:6
+#: .\templates\index.html:283 .\templates\reviews\create.html:6
 #: .\templates\reviews\index.html:7 .\templates\reviews\list.html:8
 msgid "reviews"
 msgstr "Отзывы"
@@ -200,8 +213,8 @@ msgstr "Ответы на вопросы"
 msgid "cabinet"
 msgstr "Личный кабинет"
 
-#: .\templates\base.html:72 .\templates\members\index.html:3
-#: .\templates\members\index.html:6
+#: .\templates\base.html:72 .\templates\groups\read.html:27
+#: .\templates\members\index.html:3 .\templates\members\index.html:6
 msgid "memberss"
 msgstr "Состав групп"
 
@@ -286,7 +299,7 @@ msgstr "Сохранить"
 #: .\templates\groups\edit.html:14 .\templates\groups\read.html:22
 #: .\templates\members\create.html:14 .\templates\members\edit.html:14
 #: .\templates\members\read.html:23 .\templates\news\create.html:14
-#: .\templates\news\edit.html:14 .\templates\news\read.html:47
+#: .\templates\news\edit.html:14 .\templates\news\read.html:53
 #: .\templates\payment\create.html:14 .\templates\payment\edit.html:14
 #: .\templates\payment\read.html:21 .\templates\reviews\create.html:14
 #: .\templates\schedule\create.html:14 .\templates\schedule\edit.html:14
@@ -344,7 +357,7 @@ msgstr "Удалить"
 msgid "Read"
 msgstr "Просмотреть"
 
-#: .\templates\faq.html:7
+#: .\templates\faq.html:8
 msgid "FAQ"
 msgstr "Ответы на вопросы"
 
@@ -352,21 +365,24 @@ msgstr "Ответы на вопросы"
 msgid "groupss"
 msgstr "Группы"
 
-#: .\templates\groups\index.html:16 .\templates\index.html:248
+#: .\templates\groups\index.html:16 .\templates\index.html:287
 #: .\templates\members\index.html:15 .\templates\news\index.html:15
 #: .\templates\payment\index.html:26 .\templates\schedule\index.html:15
 #: .\templates\teachers\index.html:15 .\templates\training\index.html:14
 msgid "Add"
 msgstr "Добавить"
 
+#: .\templates\groups\read.html:42 .\templates\payment\read.html:22
+msgid "Print"
+msgstr "Печать"
+
 #: .\templates\index.html:4
 msgid "App name"
 msgstr "Samga Academy"
 
-#: .\templates\index.html:31 .\templates\index.html:52
-#: .\templates\index.html:111 .\templates\index.html:140
-#: .\templates\index.html:177 .\templates\index.html:224
-#: .\templates\index.html:253 .\templates\index.html:300
+#: .\templates\index.html:40 .\templates\index.html:94
+#: .\templates\index.html:152 .\templates\index.html:257
+#: .\templates\index.html:292 .\templates\index.html:318
 msgid "claim create"
 msgstr "Подать заявку"
 
@@ -381,7 +397,7 @@ msgid "title"
 msgstr "Заголовок"
 
 #: .\templates\payment\create.html:6 .\templates\payment\edit.html:6
-#: .\templates\payment\read.html:7
+#: .\templates\payment\read.html:10
 msgid "payment"
 msgstr "Платежи"
 
@@ -393,17 +409,9 @@ msgstr "Список"
 msgid "report"
 msgstr "Отчет"
 
-#: .\templates\payment\index.html:63
-msgid "year"
-msgstr "Год"
-
-#: .\templates\payment\index.html:64
-msgid "month"
-msgstr "Месяц"
-
-#: .\templates\payment\index.html:67
-msgid "total"
-msgstr "Всего"
+#: .\templates\payment\index.html:60
+msgid "Export to Excel"
+msgstr "Экспорт в Excel"
 
 #: .\templates\registration\logged_out.html:6
 msgid "Logged out!"
@@ -532,6 +540,7 @@ msgstr "Отзывы"
 
 #: .\templates\teachers\index.html:3 .\templates\teachers\index.html:6
 #: .\templates\teachers\list.html:4 .\templates\teachers\list.html:8
+#: .\templates\teachers\list.html:9
 msgid "teacherss"
 msgstr "Наши преподаватели"
 
