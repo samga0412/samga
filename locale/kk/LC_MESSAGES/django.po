@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-18 12:16+0600\n"
+"POT-Creation-Date: 2023-05-31 20:45+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Value must start with a capital letter"
 msgstr "Мән бас әріптен басталуы керек"
 
-#: .\academy\forms.py:80 .\academy\forms.py:191 .\templates\base.html:70
+#: .\academy\forms.py:80 .\academy\forms.py:191 .\templates\base.html:69
 #: .\templates\cabinet.html:17 .\templates\cabinet.html:22
 #: .\templates\cabinet.html:54 .\templates\claim\edit.html:20
 #: .\templates\claim\index.html:13 .\templates\groups\index.html:12
@@ -31,14 +31,14 @@ msgstr "Мән бас әріптен басталуы керек"
 msgid "training"
 msgstr "Курстар"
 
-#: .\academy\forms.py:81 .\templates\base.html:48 .\templates\base.html:69
+#: .\academy\forms.py:81 .\templates\base.html:47 .\templates\base.html:68
 #: .\templates\groups\index.html:15 .\templates\groups\read.html:18
 #: .\templates\index.html:148 .\templates\teachers\create.html:6
 #: .\templates\teachers\edit.html:6 .\templates\teachers\read.html:7
 msgid "teachers"
 msgstr "Біздің мұғалімдер"
 
-#: .\academy\forms.py:101 .\academy\forms.py:122 .\templates\base.html:71
+#: .\academy\forms.py:101 .\academy\forms.py:122 .\templates\base.html:70
 #: .\templates\groups\create.html:6 .\templates\groups\edit.html:6
 #: .\templates\groups\index.html:6 .\templates\groups\read.html:7
 #: .\templates\schedule\index.html:14 .\templates\schedule\list.html:17
@@ -166,7 +166,7 @@ msgstr "Ай"
 msgid "total"
 msgstr "Жалпы"
 
-#: .\templates\base.html:37 .\templates\registration\logged_out.html:4
+#: .\templates\base.html:36 .\templates\registration\logged_out.html:4
 #: .\templates\registration\login.html:4
 #: .\templates\registration\password_change_done.html:3
 #: .\templates\registration\password_change_form.html:3
@@ -178,81 +178,81 @@ msgstr "Жалпы"
 msgid "App Name"
 msgstr "Samga Academy"
 
-#: .\templates\base.html:45
+#: .\templates\base.html:44
 msgid "about"
 msgstr "Біз туралы"
 
-#: .\templates\base.html:49 .\templates\base.html:73
+#: .\templates\base.html:48 .\templates\base.html:72
 #: .\templates\schedule\create.html:6 .\templates\schedule\edit.html:6
 #: .\templates\schedule\read.html:7
 msgid "schedule"
 msgstr "Кесте"
 
-#: .\templates\base.html:50 .\templates\base.html:75
+#: .\templates\base.html:49 .\templates\base.html:74
 #: .\templates\index.html:283 .\templates\reviews\create.html:6
 #: .\templates\reviews\index.html:7 .\templates\reviews\list.html:8
 msgid "reviews"
 msgstr "Пікірлер"
 
-#: .\templates\base.html:52 .\templates\news\create.html:6
+#: .\templates\base.html:51 .\templates\news\create.html:6
 #: .\templates\news\edit.html:6 .\templates\news\read.html:7
 msgid "news"
 msgstr "Жаңалықтар"
 
-#: .\templates\base.html:53 .\templates\contact.html:7
+#: .\templates\base.html:52 .\templates\contact.html:7
 msgid "contacts"
 msgstr "Контактілер"
 
-#: .\templates\base.html:57
+#: .\templates\base.html:56
 msgid "faq"
 msgstr "Жиі қойылатын сұрақтар"
 
-#: .\templates\base.html:61 .\templates\cabinet.html:7
+#: .\templates\base.html:60 .\templates\cabinet.html:7
 msgid "cabinet"
 msgstr "Жеке кабинет"
 
-#: .\templates\base.html:72 .\templates\groups\read.html:27
+#: .\templates\base.html:71 .\templates\groups\read.html:27
 #: .\templates\members\index.html:3 .\templates\members\index.html:6
 msgid "memberss"
 msgstr "Топтың құрамы"
 
-#: .\templates\base.html:74 .\templates\cabinet.html:79
+#: .\templates\base.html:73 .\templates\cabinet.html:79
 #: .\templates\payment\index.html:3 .\templates\payment\index.html:17
 msgid "payments"
 msgstr "Төлемдер"
 
-#: .\templates\base.html:77 .\templates\claim\index.html:3
+#: .\templates\base.html:76 .\templates\claim\index.html:3
 #: .\templates\claim\index.html:6
 msgid "claims"
-msgstr "Өтінім"
+msgstr "Өтініштер"
 
-#: .\templates\base.html:79 .\templates\news\index.html:3
+#: .\templates\base.html:78 .\templates\news\index.html:3
 #: .\templates\news\index.html:6 .\templates\news\list.html:4
 #: .\templates\news\list.html:8
 msgid "newss"
 msgstr "Жаңалықтар"
 
-#: .\templates\base.html:84 .\templates\cabinet.html:12
+#: .\templates\base.html:83 .\templates\cabinet.html:12
 #: .\templates\registration\my_account.html:4
 #: .\templates\registration\my_account.html:10
 msgid "My account"
 msgstr "Менің аккаунтым"
 
-#: .\templates\base.html:85 .\templates\cabinet.html:14
+#: .\templates\base.html:84 .\templates\cabinet.html:14
 #: .\templates\registration\password_change_form.html:9
 #: .\templates\registration\password_change_form.html:15
 msgid "Change password"
 msgstr "Құпия сөзді өзгерту"
 
-#: .\templates\base.html:87
+#: .\templates\base.html:86
 msgid "Log out"
 msgstr "Шығу"
 
-#: .\templates\base.html:92
+#: .\templates\base.html:91
 msgid "Log In"
 msgstr "Кіру үшін"
 
-#: .\templates\base.html:93 .\templates\registration\signup.html:4
+#: .\templates\base.html:92 .\templates\registration\signup.html:4
 #: .\templates\registration\signup.html:10
 msgid "Sign up"
 msgstr "Тіркелу"
@@ -278,7 +278,7 @@ msgstr "Жасау"
 #: .\templates\claim\create.html:6 .\templates\claim\edit.html:6
 #: .\templates\claim\read.html:7
 msgid "claim"
-msgstr "Талап"
+msgstr "Өтініш"
 
 #: .\templates\claim\create.html:13 .\templates\claim\edit.html:34
 #: .\templates\groups\create.html:13 .\templates\groups\edit.html:13
@@ -382,7 +382,7 @@ msgstr "Samga Academy"
 #: .\templates\index.html:152 .\templates\index.html:257
 #: .\templates\index.html:292 .\templates\index.html:318
 msgid "claim create"
-msgstr "Талап жасау"
+msgstr "Өтініш жасау"
 
 #: .\templates\members\create.html:6 .\templates\members\edit.html:6
 #: .\templates\members\read.html:7
