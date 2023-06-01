@@ -331,7 +331,7 @@ msgstr "Шағым мәліметтері"
 #: .\templates\claim\index.html:14 .\templates\groups\index.html:14
 #: .\templates\training\index.html:13
 msgid "details"
-msgstr "Егжей"
+msgstr "Өтініш қалдыру"
 
 #: .\templates\claim\index.html:37 .\templates\groups\index.html:36
 #: .\templates\members\index.html:33 .\templates\news\index.html:36
